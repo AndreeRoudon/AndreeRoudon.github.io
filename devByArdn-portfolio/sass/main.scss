@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 100%);
+}
+
+.container{
+    width: 1110px;
+    margin: auto;
+}
+
+header{
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+    position: relative;
+    .fond-profil{
+        display: none;
+        position: absolute;
+        background-image: url("../assets/images/image-profile-desktop.webp");
+        background-size: cover;
+        width: 445px;
+        height: 720px;
+        right: 0;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        span{
+            font-size: 32px;
+            font-weight: 700;
+        }
+        &__icons{
+            width: 15rem;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .intro{
+        margin: 5rem 0 15rem;
+        h1, h2 {
+            font-size: 88px;
+            word-spacing: -2.5px;
+        }
+        .nom{
+            text-decoration: underline hsl(153, 71%, 59%);
+        }
+        p {
+            margin: 3rem 0;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+            width: 30rem;
+        }
+        .contact{
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid hsl(153, 71%, 59%);
+            cursor: pointer;
+            &:hover{
+                color: hsl(153, 71%, 59%);
+            }
+        }
+        
+    }
+}
+
+aside{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 5rem 0;
+    height: 30vh;
+    .one { grid-area: 1 / 1 / 2 / 2; }
+    .two { grid-area: 1 / 2 / 2 / 3; }
+    .three { grid-area: 1 / 3 / 2 / 4; }
+    .four { grid-area: 2 / 1 / 3 / 2; }
+    .five { 
+        grid-area: 2 / 2 / 3 / 3;
+        display: none;
+    }
+    .six { 
+        grid-area: 2 / 3 / 3 / 4;
+        display: none;
+    }
+    .block{
+        h1{
+            font-size: 48px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 92px repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    height: 200vh;
+    .one { grid-area: 2 / 1 / 3 / 2; }
+    .two{ grid-area: 2 / 2 / 3 / 3; }
+    .three { grid-area: 3 / 1 / 4 / 2;}
+    .four{ grid-area: 3 / 2 / 4 / 3; }
+    .five { grid-area: 4 / 1 / 5 / 2; }
+    .six { grid-area: 4 / 2 / 5 / 3; }
+    .title{
+        grid-area: 1 / 1 / 2 / 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        h1{
+            font-size: 72px;
+        }
+        span{
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid hsl(153, 71%, 59%);
+            cursor: pointer;
+            &:hover{
+                color: hsl(153, 71%, 59%);
+            }
+        }
+    }
+    .box{
+        position: relative;
+        span{
+            font-size: 24px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            margin-left: 12vw;
+            transition: 0.4s ease-in;
+            opacity: 0;
+        }
+        h1{
+            font-size: 24px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 18px;
+            word-spacing: 12px;
+        }
+    }
+    .design-portfolio{
+        background-image: url("../assets/images/thumbnail-project-1-large.webp");
+        background-size: cover;
+        width: 540px;
+        height: 400px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(20%);
+        }
+    }
+    .landing-page{
+        background-image: url("../assets/images/thumbnail-project-2-large.webp");
+        background-size: cover;
+        width: 540px;
+        height: 400px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        &:hover{
+            filter: brightness(20%);
+        }
+    }
+    .web-app{
+        background-image: url("../assets/images/thumbnail-project-3-large.webp");
+        background-size: cover;
+        width: 540px;
+        height: 400px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(20%);
+        }
+    }
+    .web-enter{
+        background-image: url("../assets/images/thumbnail-project-4-large.webp");
+        background-size: cover;
+        width: 540px;
+        height: 400px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(20%);
+        }
+    }
+    .memory-game{
+        background-image: url("../assets/images/thumbnail-project-5-large.webp");
+        background-size: cover;
+        width: 540px;
+        height: 400px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(20%);
+        }
+    }
+    .art-gallery{
+        background-image: url("../assets/images/thumbnail-project-6-large.webp");
+        background-size: cover;
+        width: 540px;
+        height: 400px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(20%);
+        }
+    }
+}
+
+footer{
+    margin-top: 5rem;
+    height: 60vh;
+    background-color: hsl(0, 0, 14%);
+    display: flex;
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 5rem;
+        .left{
+            width: 30vw;
+            h1{
+                font-size: 88px;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        form{
+            padding: 1rem 0 5rem;
+            width: 30vw;
+            .txt_field{
+                border-bottom: 1px solid hsl(0, 0%, 100%);
+                margin-bottom: 20px;
+                input{
+                    width: 100%;
+                    color: hsl(0, 0%, 100%);
+                    padding: 0 5px;
+                    height: 40px;
+                    font-size: 16px;
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+                textarea{
+                    padding: 0 5px;
+                    font-size: 16px;
+                    height: 80px;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    resize: none;
+                    color: hsl(0, 0%, 100%);
+                }
+            }
+            .send-msg{
+                text-align: end;
+                input{
+                    color: hsl(0, 0%, 100%);
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid hsl(153, 71%, 59%);
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    &:hover{
+                        color: hsl(153, 71%, 59%);
+                    } 
+                }
+            }
+        }
+    }
+
+    .copyright{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+        border-top: 1px solid hsl(0, 0%, 100%);
+        span{
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .icons{
+            width: 15rem;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

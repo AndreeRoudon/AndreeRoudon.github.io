@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.container {
+  width: 1110px;
+  margin: auto;
+}
+
+header {
+  border-bottom: 1px solid hsl(0deg, 0%, 100%);
+  position: relative;
+}
+header .fond-profil {
+  display: none;
+  position: absolute;
+  background-image: url("../assets/images/image-profile-desktop.webp");
+  background-size: cover;
+  width: 445px;
+  height: 720px;
+  right: 0;
+}
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+header .nav span {
+  font-size: 32px;
+  font-weight: 700;
+}
+header .nav__icons {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+header .nav img {
+  width: 24px;
+  height: 24px;
+}
+header .intro {
+  margin: 5rem 0 15rem;
+}
+header .intro h1, header .intro h2 {
+  font-size: 88px;
+  word-spacing: -2.5px;
+}
+header .intro .nom {
+  text-decoration: underline hsl(153deg, 71%, 59%);
+}
+header .intro p {
+  margin: 3rem 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  width: 30rem;
+}
+header .intro .contact {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid hsl(153deg, 71%, 59%);
+  cursor: pointer;
+}
+header .intro .contact:hover {
+  color: hsl(153deg, 71%, 59%);
+}
+
+aside {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5rem 0;
+  height: 30vh;
+}
+aside .one {
+  grid-area: 1/1/2/2;
+}
+aside .two {
+  grid-area: 1/2/2/3;
+}
+aside .three {
+  grid-area: 1/3/2/4;
+}
+aside .four {
+  grid-area: 2/1/3/2;
+}
+aside .five {
+  grid-area: 2/2/3/3;
+  display: none;
+}
+aside .six {
+  grid-area: 2/3/3/4;
+  display: none;
+}
+aside .block h1 {
+  font-size: 48px;
+}
+aside .block p {
+  font-size: 18px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 92px repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  height: 200vh;
+}
+section .one {
+  grid-area: 2/1/3/2;
+}
+section .two {
+  grid-area: 2/2/3/3;
+}
+section .three {
+  grid-area: 3/1/4/2;
+}
+section .four {
+  grid-area: 3/2/4/3;
+}
+section .five {
+  grid-area: 4/1/5/2;
+}
+section .six {
+  grid-area: 4/2/5/3;
+}
+section .title {
+  grid-area: 1/1/2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+section .title h1 {
+  font-size: 72px;
+}
+section .title span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid hsl(153deg, 71%, 59%);
+  cursor: pointer;
+}
+section .title span:hover {
+  color: hsl(153deg, 71%, 59%);
+}
+section .box {
+  position: relative;
+}
+section .box span {
+  font-size: 24px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  margin-left: 12vw;
+  transition: 0.4s ease-in;
+  opacity: 0;
+}
+section .box h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+section .box p {
+  font-size: 18px;
+  word-spacing: 12px;
+}
+section .design-portfolio {
+  background-image: url("../assets/images/thumbnail-project-1-large.webp");
+  background-size: cover;
+  width: 540px;
+  height: 400px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+section .design-portfolio:hover {
+  filter: brightness(20%);
+}
+section .landing-page {
+  background-image: url("../assets/images/thumbnail-project-2-large.webp");
+  background-size: cover;
+  width: 540px;
+  height: 400px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+section .landing-page:hover {
+  filter: brightness(20%);
+}
+section .web-app {
+  background-image: url("../assets/images/thumbnail-project-3-large.webp");
+  background-size: cover;
+  width: 540px;
+  height: 400px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+section .web-app:hover {
+  filter: brightness(20%);
+}
+section .web-enter {
+  background-image: url("../assets/images/thumbnail-project-4-large.webp");
+  background-size: cover;
+  width: 540px;
+  height: 400px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+section .web-enter:hover {
+  filter: brightness(20%);
+}
+section .memory-game {
+  background-image: url("../assets/images/thumbnail-project-5-large.webp");
+  background-size: cover;
+  width: 540px;
+  height: 400px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+section .memory-game:hover {
+  filter: brightness(20%);
+}
+section .art-gallery {
+  background-image: url("../assets/images/thumbnail-project-6-large.webp");
+  background-size: cover;
+  width: 540px;
+  height: 400px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+section .art-gallery:hover {
+  filter: brightness(20%);
+}
+
+footer {
+  margin-top: 5rem;
+  height: 60vh;
+  background-color: hsl(0deg, 0%, 14%);
+  display: flex;
+}
+footer .contact {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+footer .contact .left {
+  width: 30vw;
+}
+footer .contact .left h1 {
+  font-size: 88px;
+  margin-bottom: 1rem;
+}
+footer .contact .left p {
+  font-size: 18px;
+  line-height: 28px;
+}
+footer .contact form {
+  padding: 1rem 0 5rem;
+  width: 30vw;
+}
+footer .contact form .txt_field {
+  border-bottom: 1px solid hsl(0deg, 0%, 100%);
+  margin-bottom: 20px;
+}
+footer .contact form .txt_field input {
+  width: 100%;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+footer .contact form .txt_field textarea {
+  padding: 0 5px;
+  font-size: 16px;
+  height: 80px;
+  background: none;
+  border: none;
+  outline: none;
+  resize: none;
+  color: hsl(0deg, 0%, 100%);
+}
+footer .contact form .send-msg {
+  text-align: end;
+}
+footer .contact form .send-msg input {
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid hsl(153deg, 71%, 59%);
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+footer .contact form .send-msg input:hover {
+  color: hsl(153deg, 71%, 59%);
+}
+footer .copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+  border-top: 1px solid hsl(0deg, 0%, 100%);
+}
+footer .copyright span {
+  font-size: 32px;
+  font-weight: 700;
+}
+footer .copyright .icons {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+footer .copyright img {
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
