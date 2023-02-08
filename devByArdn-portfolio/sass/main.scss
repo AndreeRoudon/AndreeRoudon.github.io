@@ -12,7 +12,7 @@ body{
 
 .container{
     width: 1110px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 header{
@@ -21,6 +21,7 @@ header{
     .fond-profil{
         display: none;
         position: absolute;
+        z-index: 1;
         background-image: url("../assets/images/image-profile-desktop.webp");
         background-size: cover;
         width: 445px;
@@ -28,6 +29,8 @@ header{
         right: 0;
     }
     .nav{
+        position: relative;
+        z-index: 2;
         display: flex;
         justify-content: space-between;
         padding: 2rem 0;
@@ -47,6 +50,8 @@ header{
         }
     }
     .intro{
+        position: relative;
+        z-index: 2;
         margin: 5rem 0 15rem;
         h1, h2 {
             font-size: 88px;
@@ -141,18 +146,35 @@ section{
             }
         }
     }
+
     .box{
-        position: relative;
-        span{
-            font-size: 24px;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            margin-left: 12vw;
-            transition: 0.4s ease-in;
-            opacity: 0;
+        .web-design{        
+            position: relative;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            .infos{
+                font-size: 24px;
+                position: absolute;
+                transition: 0.3s ease-in;
+                bottom: 45%;
+                left: 30%;
+                padding-bottom: 10px;
+                opacity: 0;
+                &:hover{
+                    color: hsl(153, 71%, 59%);
+                }
+            }
+        &:hover{
+            img{
+                filter: brightness(20%);
+            }
+            .infos{
+                opacity: 1;
+            }
         }
-        h1{
+
+        }
+        h2{
             font-size: 24px;
             font-weight: 700;
         }
@@ -161,86 +183,20 @@ section{
             word-spacing: 12px;
         }
     }
-    .design-portfolio{
-        background-image: url("../assets/images/thumbnail-project-1-large.webp");
-        background-size: cover;
-        width: 540px;
-        height: 400px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        &:hover{
-            filter: brightness(20%);
-        }
-    }
-    .landing-page{
-        background-image: url("../assets/images/thumbnail-project-2-large.webp");
-        background-size: cover;
-        width: 540px;
-        height: 400px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-
-        &:hover{
-            filter: brightness(20%);
-        }
-    }
-    .web-app{
-        background-image: url("../assets/images/thumbnail-project-3-large.webp");
-        background-size: cover;
-        width: 540px;
-        height: 400px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        &:hover{
-            filter: brightness(20%);
-        }
-    }
-    .web-enter{
-        background-image: url("../assets/images/thumbnail-project-4-large.webp");
-        background-size: cover;
-        width: 540px;
-        height: 400px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        &:hover{
-            filter: brightness(20%);
-        }
-    }
-    .memory-game{
-        background-image: url("../assets/images/thumbnail-project-5-large.webp");
-        background-size: cover;
-        width: 540px;
-        height: 400px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        &:hover{
-            filter: brightness(20%);
-        }
-    }
-    .art-gallery{
-        background-image: url("../assets/images/thumbnail-project-6-large.webp");
-        background-size: cover;
-        width: 540px;
-        height: 400px;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        &:hover{
-            filter: brightness(20%);
-        }
-    }
 }
 
+
+/********************************/
 footer{
-    margin-top: 5rem;
-    height: 60vh;
+    padding: 3rem 0;
+    height: 65vh;
     background-color: hsl(0, 0, 14%);
-    display: flex;
     .contact{
         display: flex;
         justify-content: space-between;
         padding-bottom: 5rem;
         .left{
-            width: 30vw;
+            width: 28rem;
             h1{
                 font-size: 88px;
                 margin-bottom: 1rem;
@@ -252,14 +208,14 @@ footer{
         }
         form{
             padding: 1rem 0 5rem;
-            width: 30vw;
+            width: 25rem;
             .txt_field{
                 border-bottom: 1px solid hsl(0, 0%, 100%);
                 margin-bottom: 20px;
                 input{
                     width: 100%;
                     color: hsl(0, 0%, 100%);
-                    padding: 0 5px;
+                    padding: 0 20px;
                     height: 40px;
                     font-size: 16px;
                     border: none;
@@ -267,9 +223,9 @@ footer{
                     outline: none;
                 }
                 textarea{
-                    padding: 0 5px;
+                    padding: 0 20px;
                     font-size: 16px;
-                    height: 80px;
+                    height: 100px;
                     background: none;
                     border: none;
                     outline: none;
