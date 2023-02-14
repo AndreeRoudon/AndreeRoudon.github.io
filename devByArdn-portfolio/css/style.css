@@ -172,13 +172,24 @@ section .box .web-design {
 section .box .web-design .infos {
   font-size: 24px;
   position: absolute;
-  transition: 0.3s ease-in;
-  bottom: 45%;
-  left: 30%;
-  padding-bottom: 10px;
+  transition: 0.4s ease-in;
+  bottom: 35%;
+  left: 38%;
   opacity: 0;
+  height: 124px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-section .box .web-design .infos:hover {
+section .box .web-design .infos span {
+  padding-bottom: 10px;
+  border-bottom: 2px solid hsl(153deg, 71%, 59%);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+section .box .web-design .infos span:hover {
   color: hsl(153deg, 71%, 59%);
 }
 section .box .web-design:hover img {

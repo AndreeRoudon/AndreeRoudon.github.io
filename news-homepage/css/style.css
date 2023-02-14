@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 1120px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  min-height: 8vh;
+}
+header .nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+header .nav-links li {
+  list-style: none;
+}
+header .nav-links a {
+  text-decoration: none;
+  color: hsl(236deg, 13%, 42%);
+  font-weight: 400;
+}
+header .nav-links a:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+header .burger {
+  display: none;
+  cursor: pointer;
+}
+header .burger div {
+  width: 40px;
+  height: 3px;
+  background-color: hsl(240deg, 100%, 5%);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  width: 68%;
+  margin-right: 35px;
+}
+section .desktop {
+  background-image: url("../assets/images/image-web-3-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+section .container {
+  display: flex;
+  margin-top: 30px;
+}
+section .container h1 {
+  width: 50%;
+  font-size: 55px;
+  margin-right: 15px;
+}
+section .container .intro-btn {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+section .container .intro-btn p {
+  font-size: 15px;
+  flex-grow: 1;
+  line-height: 25px;
+  font-weight: 400;
+  color: hsl(236deg, 13%, 42%);
+}
+section .container .intro-btn button {
+  background-color: hsl(5deg, 85%, 63%);
+  color: hsl(36deg, 100%, 99%);
+  width: 50%;
+  height: 50px;
+  border: none;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+section .container .intro-btn button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+
+aside {
+  background-color: hsl(240deg, 100%, 5%);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+aside h1 {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 40px;
+}
+aside .allblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+aside .block {
+  border-top: 1px solid hsl(236deg, 13%, 42%);
+}
+aside .block h2 {
+  margin: 30px 0;
+  color: hsl(36deg, 100%, 99%);
+  font-size: 20px;
+  cursor: pointer;
+}
+aside .block h2:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+aside .block p {
+  color: hsl(236deg, 13%, 42%);
+  margin: 10px 0;
+  font-size: 15px;
+}
+aside .block:first-child {
+  border: none;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 1120px;
+}
+footer .block {
+  width: 350px;
+  height: 130px;
+  display: flex;
+}
+footer .block .image-retro {
+  background-image: url("../assets/images/image-retro-pcs.jpg");
+  background-size: cover;
+  width: 30%;
+}
+footer .block .image-laptops {
+  background-image: url("../assets/images/image-top-laptops.jpg");
+  background-size: cover;
+  width: 30%;
+}
+footer .block .image-gaming {
+  background-image: url("../assets/images/image-gaming-growth.jpg");
+  background-size: cover;
+  width: 30%;
+}
+footer .block .info {
+  width: 65%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .block .info p {
+  font-size: 15px;
+  line-height: 22px;
+  color: hsl(236deg, 13%, 42%);
+}
+footer .block .info h1 {
+  color: hsl(233deg, 8%, 79%);
+}
+footer .block .info h3 {
+  color: hsl(240deg, 100%, 5%);
+  cursor: pointer;
+}
+footer .block .info h3:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+
+@media screen and (max-width: 1200px) and (min-width: 671px) {
+  body {
+    width: 90%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  header .nav-links {
+    width: 50%;
+  }
+  section {
+    width: 100%;
+    margin: 0;
+    display: flex;
+  }
+  section .desktop {
+    width: 50%;
+    margin-right: 20px;
+  }
+  section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0;
+  }
+  section .container h1 {
+    width: 100%;
+    font-size: 45px;
+  }
+  section .container .intro-btn {
+    width: 100%;
+  }
+  section .container .intro-btn button {
+    margin-top: 30px;
+  }
+  aside {
+    margin-top: 50px;
+    width: 100%;
+  }
+  aside .allblock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  aside .allblock .block {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid hsl(236deg, 13%, 42%);
+    border-top: none;
+    padding: 0 20px;
+  }
+  aside .allblock .block:first-child {
+    border: none;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  footer .block {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 670px) {
+  body {
+    width: 90%;
+    overflow-x: hidden;
+  }
+  header .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 250px 0 500px 30px;
+    height: 100vh;
+    background-color: hsl(36deg, 100%, 99%);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  section .desktop {
+    background-image: url("../assets/images/image-web-3-mobile.jpg");
+  }
+  section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  section .container h1 {
+    width: 100%;
+    font-size: 40px;
+  }
+  section .container .intro-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  section .container .intro-btn button {
+    margin: 20px 0;
+  }
+  aside {
+    width: 100%;
+    margin-top: 50px;
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  footer .block {
+    margin-bottom: 30px;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*# sourceMappingURL=style.css.map */
