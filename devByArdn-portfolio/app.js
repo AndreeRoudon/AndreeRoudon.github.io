@@ -1,3 +1,13 @@
+cv = document.querySelector(".cv");
+cv.addEventListener('click', () => {
+    window.location.href = "https://andreeroudon.github.io/CV-AndreeRoudon/";
+});
+cv1 = document.querySelector(".cv1");
+cv1.addEventListener('click', () => {
+    window.location.href = "https://andreeroudon.github.io/CV-AndreeRoudon/";
+});
+
+
 const viewProject = {
     1: document.getElementById("view-project1"),
     2: document.getElementById("view-project2"),
