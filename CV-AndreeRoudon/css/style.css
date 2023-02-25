@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  width: 1100px;
+  margin: auto;
+}
+
+header {
+  height: 55vh;
+  display: flex;
+  position: relative;
+}
+header .img-profile {
+  height: 100%;
+  width: 420px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  visibility: hidden;
+}
+header .profile-info {
+  padding: 4rem 5rem 0 3rem;
+}
+header .profile-info h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 22%);
+  margin-bottom: 2rem;
+}
+header .profile-info h1:after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 3px;
+  background: black;
+  left: 200px;
+}
+header .profile-info p {
+  color: hsl(236deg, 13%, 42%);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 500px;
+}
+header .nav-bar {
+  position: absolute;
+  background-color: hsl(52deg, 90%, 54%);
+  width: 100%;
+  opacity: 0.8;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15vh;
+}
+header .nav-bar .infos h1 {
+  font-size: 55px;
+}
+header .nav-bar .infos h2 {
+  font-size: 19px;
+}
+header .nav-bar .infos .git {
+  display: flex;
+  gap: 10px;
+}
+header .nav-bar .contact {
+  background: white;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .nav-bar .block {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header .nav-bar .block i {
+  display: grid;
+  place-items: center;
+  background-color: hsl(0deg, 0%, 6%);
+  color: hsl(52deg, 90%, 54%);
+  height: 40px;
+  width: 40px;
+  font-size: 1.4rem;
+}
+
+section {
+  display: flex;
+  height: 85vh;
+}
+section .bar-section {
+  background-color: hsl(0deg, 0%, 16%);
+  color: hsl(0deg, 0%, 100%);
+  width: 420px;
+  padding: 3rem 4rem 0 4rem;
+}
+section .bar-section .skills h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+section .bar-section .top-skills h3 {
+  font-size: 20px;
+  margin: 2rem 0;
+}
+section .bar-section .top-skills .list_skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+  color: hsl(240deg, 2%, 79%);
+}
+section .bar-section .bottom-skills h3 {
+  font-size: 20px;
+  margin: 2rem 0;
+}
+section .bar-section .bottom-skills .box {
+  position: relative;
+  margin-bottom: 1rem;
+}
+section .bar-section .bottom-skills .box .title {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(240deg, 2%, 79%);
+}
+section .bar-section .bottom-skills .box .bar-gray {
+  height: 10px;
+  width: 100%;
+  background-color: hsl(207deg, 13%, 34%);
+}
+section .bar-section .bottom-skills .box .bar-yellow {
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  background-color: hsl(52deg, 90%, 54%);
+}
+section .bar-section .bottom-skills .language {
+  list-style: none;
+  font-size: 20px;
+  color: hsl(240deg, 2%, 79%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section aside {
+  width: 680px;
+  padding: 3rem 4rem 0 2rem;
+}
+section aside .work-exp {
+  height: 27rem;
+}
+section aside .work-exp h1 {
+  position: relative;
+  font-size: 30px;
+  color: hsl(0deg, 0%, 6%);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+}
+section aside .work-exp h1:after {
+  content: "";
+  position: relative;
+  left: 10px;
+  height: 3px;
+  width: 200px;
+  background-color: hsl(0deg, 0%, 6%);
+}
+section aside .work-exp .box {
+  display: flex;
+  height: 7rem;
+}
+section aside .work-exp .box .date {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 22%);
+  font-size: 20px;
+  font-weight: 700;
+  min-width: 140px;
+  border-right: 3px solid hsl(0deg, 0%, 6%);
+}
+section aside .work-exp .box .date:after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  height: 20px;
+  width: 20px;
+  border: 3px solid hsl(0deg, 0%, 6%);
+  border-radius: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+}
+section aside .work-exp .box .text {
+  margin-left: 3rem;
+  font-size: 20px;
+  color: hsl(236deg, 13%, 42%);
+}
+section aside .education h1 {
+  position: relative;
+  font-size: 30px;
+  color: hsl(0deg, 0%, 6%);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+}
+section aside .education h1:after {
+  content: "";
+  position: relative;
+  left: 10px;
+  height: 3px;
+  width: 250px;
+  background-color: hsl(0deg, 0%, 6%);
+}
+section aside .education .box {
+  display: flex;
+  height: 7rem;
+}
+section aside .education .box .date {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 22%);
+  font-size: 20px;
+  font-weight: 700;
+  min-width: 140px;
+  border-right: 3px solid hsl(0deg, 0%, 6%);
+}
+section aside .education .box .date:after {
+  content: "";
+  position: absolute;
+  right: -14px;
+  height: 20px;
+  width: 20px;
+  border: 3px solid hsl(0deg, 0%, 6%);
+  border-radius: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+}
+section aside .education .box .text {
+  margin-left: 3rem;
+  font-size: 20px;
+  color: hsl(236deg, 13%, 42%);
+}
+
+/*# sourceMappingURL=style.css.map */
