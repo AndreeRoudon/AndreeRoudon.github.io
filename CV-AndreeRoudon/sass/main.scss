@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    height: 55vh;
+    height: 28rem;
     display: flex;
     position: relative;
     .img-profile{
@@ -20,7 +20,6 @@ header{
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        visibility: hidden;
     }
     .profile-info{
         padding: 4rem 5rem 0 3rem;
@@ -34,11 +33,11 @@ header{
             margin-bottom: 2rem;
             &:after{
                 content: '';
-                position: absolute;
+                position: relative;
                 width: 250px;
                 height: 3px;
                 background: black;
-                left: 200px;
+                left: 10px;
             }
         }
         p{
@@ -47,6 +46,7 @@ header{
             font-weight: 500;
             line-height: 24px;
             width: 500px;
+            text-align: justify;
         }
     }
     .nav-bar{
@@ -58,17 +58,13 @@ header{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        height: 15vh;
+        height: 9rem;
         .infos{
             h1{
                 font-size: 55px;
             }
             h2{
                 font-size: 19px;
-            }
-            .git{
-                display: flex;
-                gap: 10px;
             }
         }
         .contact{
@@ -98,7 +94,7 @@ header{
 
 section{
     display: flex;
-    height: 85vh;
+    height: 58rem;
     .bar-section{
         background-color: hsl(0, 0%, 16%);
         color: hsl(0, 0%, 100%);
@@ -106,7 +102,7 @@ section{
         padding: 3rem 4rem 0 4rem;
         .skills{
             h1{
-                font-size: 30px;
+                font-size: 24px;
                 letter-spacing: 3px;
             }
         }
@@ -163,21 +159,21 @@ section{
         width: 680px;
         padding: 3rem 4rem 0 2rem;
         .work-exp{
-            height: 27rem;
+            height: 33rem;
             h1{
                 position: relative;
-                font-size: 30px;
+                font-size: 28px;
                 color: hsl(0, 0%, 6%);
                 margin-bottom: 2rem;
                 display: flex;
                 align-items: center;
-                letter-spacing: 3px;
+                letter-spacing: 2px;
                 &:after{
                     content: '';
                     position: relative;
                     left: 10px;
                     height: 3px;
-                    width: 200px;
+                    width: 180px;
                     background-color: hsl(0, 0%, 6%);
                 }
             }
@@ -209,17 +205,20 @@ section{
                     font-size: 20px;
                     color: hsl(236, 13%, 42%);
                 }
+                &:last-child{
+                    height: 5rem;
+                }
             }
         }
         .education{
             h1{
                 position: relative;
-                font-size: 30px;
+                font-size: 28px;
                 color: hsl(0, 0%, 6%);
                 margin-bottom: 2rem;
                 display: flex;
                 align-items: center;
-                letter-spacing: 3px;
+                letter-spacing: 2px;
                 &:after{
                     content: '';
                     position: relative;
@@ -256,6 +255,9 @@ section{
                     margin-left: 3rem;
                     font-size: 20px;
                     color: hsl(236, 13%, 42%);
+                }
+                &:nth-last-child(-n+2){
+                    height: 5rem;
                 }
             }
         }
