@@ -20,12 +20,12 @@ header {
   position: relative;
 }
 header .fond-profil {
-  display: none;
   position: absolute;
   z-index: 1;
-  background-image: url("../assets/images/image-profile-desktop.webp");
+  background-image: url("../assets/images/photo_profil.jpg");
   background-size: cover;
-  width: 445px;
+  background-position: center;
+  width: 450px;
   height: 720px;
   right: 0;
 }
@@ -34,7 +34,7 @@ header .nav {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 2rem 1rem 2rem 0;
 }
 header .nav span {
   font-size: 32px;
