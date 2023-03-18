@@ -35,6 +35,7 @@ nav ul {
   display: flex;
   list-style: none;
   cursor: pointer;
+  position: relative;
 }
 nav ul:first-child {
   gap: 1rem;
@@ -47,6 +48,9 @@ nav .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 nav .logo strong {
   font-size: 2rem;
