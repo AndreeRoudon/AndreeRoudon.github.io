@@ -49,6 +49,6 @@ viewCode[2].addEventListener('click', () => {
 viewCode[3].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/dine-restaurant";
 });
-viewCode[3].addEventListener('click', () => {
+viewCode[4].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/metropolis-series";
 });
