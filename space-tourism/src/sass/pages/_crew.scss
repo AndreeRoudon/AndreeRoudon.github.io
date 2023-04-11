@@ -1,0 +1,79 @@
+.crew-page{
+    min-height: 100vh;
+    background: url("/assets/crew/background-crew-desktop.jpg")no-repeat;
+    background-size: cover;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+}
+
+.crew-main{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6rem 0;
+        .title{
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 4.7px;
+            text-transform: uppercase;
+            span{
+                opacity: 0.25;
+                font-weight: 700;
+            }
+        }
+        .infos{
+            .role{
+                font-size: 32px;
+                font-weight: 400;
+                text-transform: uppercase;
+                opacity: .5;
+            }
+            .name{
+                font-size: 56px;
+                font-weight: 400;
+                text-transform: uppercase;
+                margin: 1.5rem 0;
+            }
+            .bio{
+                font-family: 'Barlow Condensed', sans-serif;
+                color: $color-blue;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 32px;
+                text-align: justify;
+                max-width: 444px;
+            }
+        }
+        .links-crew{
+            display: flex;
+            gap: 24px;
+            .cercle{
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                background: $color-white;
+                border-radius: 100%;
+            }
+            .not-active{
+                opacity: 0.17;
+                &:hover{
+                    transition: opacity .3s;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}

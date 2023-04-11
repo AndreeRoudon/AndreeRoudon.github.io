@@ -1,0 +1,72 @@
+.home-page{
+    height: 100vh;
+    background: url("/assets/home/background-home-desktop.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $color-white;
+}
+
+.home-main{
+    width: 80%;
+    margin: 16rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    .left{
+        width: 450px;
+        .topSpace{
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 4.7px;
+            color: $color-blue;
+            text-transform: uppercase;
+        }
+        .title{
+            font-size: 150px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 2rem 0;
+        }
+        .parag{
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            color: $color-blue;
+            text-align: justify;
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        button{
+            position: relative;
+            font-family: 'Bellefair', serif;
+            height: 274px;
+            width: 274px;
+            border-radius: 100%;
+            border: none;
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 274px;
+                width: 274px;
+                border-radius: 100%;
+                border: none;
+                background: rgba($color: $color-white, $alpha: 0.1);
+                transform: scale(1);
+                transition: transform .4s;
+            }
+            &:hover:after{
+                transform: scale(1.60);
+            }
+        }
+    }
+}

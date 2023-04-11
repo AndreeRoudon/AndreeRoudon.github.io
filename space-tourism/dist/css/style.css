@@ -1,0 +1,425 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bellefair", serif;
+}
+
+.home-page {
+  height: 100vh;
+  background: url("/assets/home/background-home-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+}
+
+.home-main {
+  width: 80%;
+  margin: 16rem auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.home-main .left {
+  width: 450px;
+}
+.home-main .left .topSpace {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 4.7px;
+  color: #D0D6F9;
+  text-transform: uppercase;
+}
+.home-main .left .title {
+  font-size: 150px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+.home-main .left .parag {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #D0D6F9;
+  text-align: justify;
+}
+.home-main .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.home-main .right button {
+  position: relative;
+  font-family: "Bellefair", serif;
+  height: 274px;
+  width: 274px;
+  border-radius: 100%;
+  border: none;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.home-main .right button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 274px;
+  width: 274px;
+  border-radius: 100%;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1);
+  transition: transform 0.4s;
+}
+.home-main .right button:hover:after {
+  transform: scale(1.6);
+}
+
+.crew-page {
+  min-height: 100vh;
+  background: url("/assets/crew/background-crew-desktop.jpg") no-repeat;
+  background-size: cover;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.crew-main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.crew-main .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6rem 0;
+}
+.crew-main .left .title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 4.7px;
+  text-transform: uppercase;
+}
+.crew-main .left .title span {
+  opacity: 0.25;
+  font-weight: 700;
+}
+.crew-main .left .infos .role {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.crew-main .left .infos .name {
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+.crew-main .left .infos .bio {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #D0D6F9;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: justify;
+  max-width: 444px;
+}
+.crew-main .left .links-crew {
+  display: flex;
+  gap: 24px;
+}
+.crew-main .left .links-crew .cercle {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background: #FFF;
+  border-radius: 100%;
+}
+.crew-main .left .links-crew .not-active {
+  opacity: 0.17;
+}
+.crew-main .left .links-crew .not-active:hover {
+  transition: opacity 0.3s;
+  opacity: 0.5;
+}
+.crew-main .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.destination-page {
+  height: 100vh;
+  background: url("/assets/destination/background-destination-desktop.jpg") no-repeat;
+  background-size: cover;
+  color: #FFF;
+}
+
+.destination-main {
+  width: 80%;
+  margin: 3rem auto 0;
+}
+.destination-main .title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4.7px;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+.destination-main .title span {
+  font-weight: 700;
+  opacity: 0.25;
+}
+.destination-main .destination-section {
+  display: flex;
+  justify-content: space-between;
+}
+.destination-main .destination-section .left {
+  margin-left: 2rem;
+}
+.destination-main .destination-section .left .img-planet {
+  width: 445px;
+  height: 445px;
+}
+.destination-main .destination-section .right {
+  width: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.destination-main .destination-section .right .links-planet {
+  font-family: "Barlow Condensed", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  width: 285px;
+}
+.destination-main .destination-section .right .links-planet a {
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+.destination-main .destination-section .right .links-planet .active {
+  color: #FFF;
+}
+.destination-main .destination-section .right .links-planet .active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+}
+.destination-main .destination-section .right .links-planet .not-active {
+  color: #D0D6F9;
+}
+.destination-main .destination-section .right .links-planet .not-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.destination-main .destination-section .right .links-planet .not-active:hover:after {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.destination-main .destination-section .right .title-planet {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.destination-main .destination-section .right .description {
+  color: #D0D6F9;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 32px;
+  border-bottom: 1px solid #383b4b;
+  padding-bottom: 2rem;
+}
+.destination-main .destination-section .right .info {
+  display: flex;
+  gap: 5rem;
+  text-transform: uppercase;
+}
+.destination-main .destination-section .right .info h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #D0D6F9;
+  letter-spacing: 2.4px;
+}
+.destination-main .destination-section .right .info .distance, .destination-main .destination-section .right .info .travel {
+  font-size: 28px;
+  margin-top: 1rem;
+}
+
+.techno-page {
+  height: 100vh;
+  background: url("/assets/technology/background-technology-desktop.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+}
+
+.techno-main {
+  margin-left: 10vw;
+}
+.techno-main h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  letter-spacing: 4.7px;
+  margin: 5rem 0 2rem;
+}
+.techno-main h1 span {
+  opacity: 0.25;
+  font-weight: 700;
+}
+.techno-main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.techno-main .container .links-number {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.techno-main .container .links-number .cercle {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  text-decoration: none;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+}
+.techno-main .container .links-number .active {
+  background: #FFF;
+  color: #0B0D17;
+}
+.techno-main .container .links-number .not-active {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFF;
+}
+.techno-main .container .links-number .not-active:hover {
+  transition: border 0.3s;
+  border: 1px solid white;
+}
+.techno-main .container .infos span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+  color: #D0D6F9;
+  text-transform: uppercase;
+}
+.techno-main .container .infos .name {
+  font-family: "Bellefair", serif;
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 1rem 0 2rem;
+}
+.techno-main .container .infos .description {
+  max-width: 444px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #D0D6F9;
+  text-align: justify;
+}
+
+header {
+  font-family: "Barlow Condensed", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  margin-left: 3vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header .logo:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 7vw;
+  width: 37vw;
+  height: 1px;
+  background-color: #FFF;
+  opacity: 0.25;
+}
+header .nav-links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 56%;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.04);
+  margin: 2rem 0;
+  padding: 2rem 9vw 0 9vw;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+header .nav-links span {
+  font-weight: 700;
+}
+header .nav-links .active {
+  position: relative;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  list-style: none;
+  color: #FFF;
+}
+header .nav-links .active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+}
+header .nav-links .not-active {
+  position: relative;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  list-style: none;
+  color: #FFF;
+}
+header .nav-links .not-active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header .nav-links .not-active:hover:after {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */
