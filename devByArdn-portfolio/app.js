@@ -38,7 +38,9 @@ viewProject[3].addEventListener('click', () => {
 viewProject[4].addEventListener('click', () => {
     window.location.href = "https://andreeroudon.github.io/metropolis-series/";
 });
-
+viewProject[5].addEventListener('click', () => {
+    window.location.href = "https://andreeroudon.github.io/space-tourism/";
+});
 
 viewCode[1].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/news-homepage";
@@ -51,4 +53,7 @@ viewCode[3].addEventListener('click', () => {
 });
 viewCode[4].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/metropolis-series";
+});
+viewCode[5].addEventListener('click', () => {
+    window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/space-tourism";
 });
