@@ -1,5 +1,5 @@
 .home-page{
-    height: 100vh;
+    min-height: 100vh;
     background: url("../../assets/home/background-home-desktop.jpg")no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,11 +8,10 @@
 
 .home-main{
     width: 80%;
-    margin: 16rem auto 0;
+    margin: 25vh auto 0;
     display: flex;
     justify-content: space-between;
     .left{
-        width: 450px;
         .topSpace{
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 28px;
@@ -34,6 +33,7 @@
             line-height: 32px;
             color: $color-blue;
             text-align: justify;
+            max-width: 444px;
         }
     }
     .right{
@@ -70,3 +70,86 @@
         }
     }
 }
+
+@media (max-width: 1100px) {
+    .home-page{
+        background: url("../../assets/home/background-home-tablet.jpg")no-repeat;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        height: auto;
+    }
+    .home-main{
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex-grow: 1;
+        .left{
+            .topSpace{
+                font-size: 20px;
+                text-align: center;
+                letter-spacing: 3.4px;
+            }
+            .title{
+                margin: 1rem 0;
+            }
+            .parag{
+                text-align: center;
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        .right{
+            button{
+                margin-bottom: 3rem;
+                height: 242px;
+                width: 242px;
+                &:after{
+                    height: 242px;
+                    width: 242px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .home-page{
+        background: url("../../assets/home/background-home-mobile.jpg")no-repeat;
+        background-size: cover;
+    }
+    .home-main{
+        margin-top: 0;
+        .left{
+            .topSpace{
+                font-size: 16px;
+                letter-spacing: 2.7px;
+            }
+            .title{
+                margin: 1rem 0;
+                font-size: 80px;
+                text-align: center;
+            }
+            .parag{
+                font-size: 15px;
+                line-height: 25px;
+                max-width: 327px;
+            }
+        }
+        .right{
+            button{
+                margin-bottom: 1rem;
+                height: 150px;
+                width: 150px;
+                font-size: 20px;
+                &:after{
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+

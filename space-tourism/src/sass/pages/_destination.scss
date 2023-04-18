@@ -1,5 +1,5 @@
 .destination-page{
-    height: 100vh;
+    min-height: 100vh;
     background: url("../../assets/destination/background-destination-desktop.jpg")no-repeat;
     background-size: cover;
     color: $color-white;
@@ -23,15 +23,16 @@
     .destination-section{
         display: flex;
         justify-content: space-between;
-        .left{
+        .img-planet{
             margin-left: 2rem;
-            .img-planet{
+            margin-right: min(2rem, 5%);
+            img{
                 width: 445px;
                 height: 445px;
             }
         }
         .right{
-            width: 445px;
+            max-width: 445px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -67,13 +68,16 @@
                         content: "";
                         position: absolute;
                         bottom: 0;
-                        width: 0;
+                        width: 100%;
                         height: 3px;
                         background-color: rgba($color: $color-white, $alpha: 0.5);
+                        transform: scaleX(0);
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
                     }
                     &:hover:after{
-                        width: 100%;
-                        transition: all 0.3s ease-in-out;
+                        transform: scaleX(1);                
+                        transform-origin: bottom left;
                     }
                 }
             }
@@ -104,6 +108,93 @@
                 .distance, .travel{
                     font-size: 28px;
                     margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .destination-page{
+        background: url("../../assets/destination/background-destination-tablet.jpg")no-repeat;
+        background-size: cover;
+        height: auto;
+    }
+    .destination-main{
+        width: 94%;
+        .title{
+            font-size: 20px;
+            letter-spacing: 3.4px;
+        }
+        .destination-section{
+            flex-direction: column;
+            align-items: center;
+            .img-planet{
+                img{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            .right{
+                align-items: center;
+                max-width: 575px;
+                margin-top: 2rem;
+                .title-planet{
+                    margin-top: 2rem;
+                    font-size: 80px;
+                }
+                .description{
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 28px;
+                }
+                .info{
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .destination-page{
+        background: url("../../assets/destination/background-destination-mobile.jpg")no-repeat;
+        background-size: cover;
+    }
+    .destination-main{
+        width: 90%;
+        .title{
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 2.7px;
+        }
+        .destination-section{
+            .img-planet{
+                img{
+                    width: 170px;
+                    height: 170px;
+                }
+            }
+            .right{
+                .links-planet{
+                    width: 237px;
+                    a{
+                        font-size: 14px;
+                        letter-spacing: 2.4px;
+                    }
+                }
+                .title-planet{
+                    font-size: 56px;
+                }
+                .description{
+                    font-size: 15px;
+                    text-align: center;
+                    line-height: 25px;
+                }
+                .info{
+                    flex-direction: column;
+                    gap: 2rem;
+                    text-align: center;
                 }
             }
         }
