@@ -98,13 +98,12 @@ header{
 
 @media (max-width: 720px) {
     header{
-        padding: 2rem 0 0;
+        padding: 1rem 0 0;
         .nav-links{
             display: none;
         }
         .burger{
             cursor: pointer;
-            display: block;
             display: flex;
             flex-direction: column;
             gap: 6px;
