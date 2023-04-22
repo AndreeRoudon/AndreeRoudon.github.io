@@ -6,6 +6,7 @@
 
 body {
   font-family: "Bellefair", serif;
+  overflow-x: hidden;
 }
 
 .home-page {
@@ -807,20 +808,71 @@ header .burger {
     padding: 1rem 0 0;
   }
   header .nav-links {
-    display: none;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 67%;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 24px;
+    padding: 18vh 0 0 10vw;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  header .nav-links span {
+    display: inline-block;
+  }
+  header .nav-links .active, header .nav-links .not-active {
+    padding-bottom: 0.5rem;
+  }
+  header .nav-links a {
+    opacity: 0;
   }
   header .burger {
+    position: relative;
+    z-index: 2;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin-right: 3vw;
+    margin-right: 5vw;
   }
-  header .burger .line {
+  header .burger div {
     width: 24px;
     height: 3px;
     background-color: #D0D6F9;
   }
+}
+.nav-active {
+  overflow-x: hidden;
+  transform: translateX(0%) !important;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-7px, -6px);
 }
 
 /*# sourceMappingURL=style.css.map */
