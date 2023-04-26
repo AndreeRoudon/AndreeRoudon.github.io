@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: "Bellefair", serif;
   overflow-x: hidden;
 }
@@ -427,7 +427,7 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.destination-main .destination-section .right .title-planet {
+.destination-main .destination-section .right .title-planet h1 {
   font-size: 100px;
   text-transform: uppercase;
   font-weight: 400;
@@ -483,7 +483,7 @@ body {
     max-width: 575px;
     margin-top: 2rem;
   }
-  .destination-main .destination-section .right .title-planet {
+  .destination-main .destination-section .right .title-planet h1 {
     margin-top: 2rem;
     font-size: 80px;
   }
@@ -520,7 +520,7 @@ body {
     font-size: 14px;
     letter-spacing: 2.4px;
   }
-  .destination-main .destination-section .right .title-planet {
+  .destination-main .destination-section .right .title-planet h1 {
     font-size: 56px;
   }
   .destination-main .destination-section .right .description {
@@ -849,7 +849,6 @@ header .burger {
   }
 }
 .nav-active {
-  overflow-x: hidden;
   transform: translateX(0%) !important;
 }
 

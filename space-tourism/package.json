@@ -2,10 +2,23 @@
   "name": "starter-code",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "data.js",
   "scripts": {
-    "sass": "sass --watch ./src/sass/main.scss:./dist/css/style.css"
+    "sass": "sass --watch ./src/sass/main.scss:./dist/css/style.css",
+    "start":"http-server",
+    "dev":"http-server"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenClassrooms-Student-Center/7697016-Front-End.1.git"
+  },
+  "author": "Andree Roudon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OpenClassrooms-Student-Center/7697016-Front-End.1/issues"
+  },
+  "homepage": "https://github.com/OpenClassrooms-Student-Center/7697016-Front-End.1#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
 }

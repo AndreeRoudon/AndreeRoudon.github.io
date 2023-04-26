@@ -82,9 +82,11 @@
                 }
             }
             .title-planet{
-                font-size: 100px;
-                text-transform: uppercase;
-                font-weight: 400;
+                h1{
+                    font-size: 100px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
             }
             .description{
                 color: $color-blue;
@@ -140,8 +142,10 @@
                 max-width: 575px;
                 margin-top: 2rem;
                 .title-planet{
-                    margin-top: 2rem;
-                    font-size: 80px;
+                    h1{
+                        margin-top: 2rem;
+                        font-size: 80px;
+                    }
                 }
                 .description{
                     font-size: 16px;
@@ -184,7 +188,9 @@
                     }
                 }
                 .title-planet{
-                    font-size: 56px;
+                    h1{
+                        font-size: 56px;
+                    }
                 }
                 .description{
                     font-size: 15px;
