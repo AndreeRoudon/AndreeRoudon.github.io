@@ -220,11 +220,11 @@ section aside .education h1:after {
   width: 250px;
   background-color: hsl(0deg, 0%, 6%);
 }
-section aside .education .box {
+section aside .education .box2 {
   display: flex;
   height: 5rem;
 }
-section aside .education .box .date {
+section aside .education .box2 .date {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -234,7 +234,7 @@ section aside .education .box .date {
   min-width: 140px;
   border-right: 3px solid hsl(0deg, 0%, 6%);
 }
-section aside .education .box .date:after {
+section aside .education .box2 .date:after {
   content: "";
   position: absolute;
   right: -14px;
@@ -244,7 +244,7 @@ section aside .education .box .date:after {
   border-radius: 50%;
   background-color: hsl(0deg, 0%, 100%);
 }
-section aside .education .box .text {
+section aside .education .box2 .text {
   margin-left: 3rem;
   font-size: 20px;
   color: hsl(236deg, 13%, 42%);
