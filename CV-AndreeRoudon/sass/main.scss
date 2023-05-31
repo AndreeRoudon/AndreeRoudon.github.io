@@ -94,7 +94,7 @@ header{
 
 section{
     display: flex;
-    height: 58rem;
+    height: 60rem;
     .bar-section{
         background-color: hsl(0, 0%, 16%);
         color: hsl(0, 0%, 100%);
@@ -230,7 +230,7 @@ section{
             }
             .box{
                 display: flex;
-                height: 7rem;
+                height: 5rem;
                 .date{
                     display: flex;
                     position: relative;
@@ -247,7 +247,7 @@ section{
                         height: 20px;
                         width: 20px;
                         border: 3px solid hsl(0, 0%, 6%);
-                        border-radius: 100%;
+                        border-radius: 50%;
                         background-color: hsl(0, 0%, 100%);
                     }
                 }
@@ -255,9 +255,6 @@ section{
                     margin-left: 3rem;
                     font-size: 20px;
                     color: hsl(236, 13%, 42%);
-                }
-                &:nth-last-child(-n+2){
-                    height: 5rem;
                 }
             }
         }

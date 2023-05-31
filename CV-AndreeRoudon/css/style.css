@@ -92,7 +92,7 @@ header .nav-bar .block i {
 
 section {
   display: flex;
-  height: 58rem;
+  height: 60rem;
 }
 section .bar-section {
   background-color: hsl(0deg, 0%, 16%);
@@ -222,7 +222,7 @@ section aside .education h1:after {
 }
 section aside .education .box {
   display: flex;
-  height: 7rem;
+  height: 5rem;
 }
 section aside .education .box .date {
   display: flex;
@@ -241,16 +241,13 @@ section aside .education .box .date:after {
   height: 20px;
   width: 20px;
   border: 3px solid hsl(0deg, 0%, 6%);
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: hsl(0deg, 0%, 100%);
 }
 section aside .education .box .text {
   margin-left: 3rem;
   font-size: 20px;
   color: hsl(236deg, 13%, 42%);
-}
-section aside .education .box:nth-last-child(-n+2) {
-  height: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

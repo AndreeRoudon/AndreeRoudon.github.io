@@ -194,7 +194,6 @@ section{
 /********************************/
 footer{
     padding: 3rem 0;
-    height: 65vh;
     background-color: hsl(0, 0, 14%);
     .contact{
         display: flex;
@@ -228,6 +227,7 @@ footer{
                     outline: none;
                 }
                 textarea{
+                    width: 100%;
                     padding: 0 20px;
                     font-size: 16px;
                     height: 100px;
