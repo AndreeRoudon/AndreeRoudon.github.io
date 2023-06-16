@@ -1,0 +1,245 @@
+.container-home {
+    font-family: 'Roboto', sans-serif;
+}
+
+// Entête de la page d'accueil -> logo + localisation + intro
+.intro {
+    display: flex;
+    flex-direction: column;
+
+    &__localisation {
+        display: flex;
+        justify-content: center;
+        gap: 17px;
+        padding: 15.5px 0;
+        background: $color-grey;
+        width: 100%;
+    }
+
+    &__heading {
+        height: 287.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        background: $color-light-grey;
+
+        &--title {
+            max-width: 240px;
+            line-height: 28px;
+        }
+
+        &--parag {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 315px;
+            line-height: 21px;
+        }
+
+        &--btn {
+            padding: 13px 18.75px;
+            @include btn-gradient;
+        }
+    }
+}
+
+// Fonctionnement du service en ligne
+.fonctionnement {
+    padding: 48px 20px 68px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 27px;
+
+        .fonctionnement__item {
+            position: relative;
+            box-shadow: 0px 4px 15px $color-black-opacity;
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            width: 100%;
+            height: 72px;
+            background-color: $color-light-grey;
+            border-radius: 20px;
+            padding: 0 35px 0 20px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color .3s, background-color .3s;
+
+            &:hover {
+                background-color: $color-black-hover-opacity;
+
+                .fa-solid {
+                    color: $color-primary;
+                }
+            }
+
+            &--number {
+                position: absolute;
+                left: -10px;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: $color-primary;
+                text-align: center;
+                color: $color-white;
+                line-height: 1.5;
+                font-size: 14px;
+            }
+        }
+
+        .fa-solid {
+            color: $color-grey-fa;
+        }
+    }
+}
+
+// Restaurants item -> img + text
+.restaurants {
+    background-color: $color-light-grey;
+    padding: 54px 20px 66px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    &__item {
+        background: $color-white;
+        height: 251px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px $color-black-opacity;
+        transform: scale(1);
+        transform-origin: center;
+        transition: transform .3s ease-out;
+
+        &:hover {
+            transform: scale(1.05);
+            transform-origin: center;
+        }
+
+        &--img {
+            cursor: pointer;
+            height: 174px;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        &--text {
+            position: relative;
+            padding: 16px 0 12px 13px;
+
+            .fa-solid {
+                position: absolute;
+                right: 33px;
+                top: 23px;
+                @include heart;
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        span {
+            font-size: 17px;
+            font-weight: 300;
+        }
+    }
+
+    .restaurants__nouveau {
+        position: relative;
+
+        &:after {
+            content: 'Nouveau';
+            position: absolute;
+            top: 13px;
+            right: 12px;
+            width: 80px;
+            height: 29px;
+            background: $color-light-green;
+            color: $color-dark-green;
+            display: grid;
+            place-items: center;
+            border-radius: 2px;
+            box-shadow: 0 2px 4px $color-black-opacity;
+        }
+    }
+}
+
+// Taille d'écran en version desktop et tablette
+@media screen and (min-width: 767px) {
+    .home-header {
+        .home-header__logo {
+            padding: 30px 0;
+
+            &--img {
+                width: 200px;
+            }
+        }
+
+        .home-header__intro {
+            &--title {
+                max-width: none;
+                font-size: 40px;
+            }
+
+            &--parag {
+                max-width: none;
+            }
+        }
+    }
+
+
+    .fonctionnement {
+        padding: 50px 0 50px 15px;
+        max-width: 1080px;
+        margin: auto;
+
+        .fonctionnement__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .fonctionnement__item {
+                width: 320px;
+            }
+        }
+    }
+
+    .restaurants {
+        padding: 30px 15px;
+
+        .title {
+            padding-left: 15px;
+            max-width: 1080px;
+            margin: auto;
+        }
+
+        &__container {
+            max-width: 1080px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            grid-row-gap: 50px;
+            grid-column-gap: clamp(50px, 5vw, 100px);
+            margin-top: 30px;
+        }
+
+        &__nouveau {
+            &:after {
+                right: 18px;
+            }
+        }
+    }
+}

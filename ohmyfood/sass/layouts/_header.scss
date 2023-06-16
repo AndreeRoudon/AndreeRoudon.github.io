@@ -1,0 +1,60 @@
+// Entête de la page logo + arrow
+.header {
+    position: relative;
+    display: grid;
+    place-items: center;
+    gap: 64px;
+    box-shadow: 0px 2px 4px $color-black-opacity;
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 23px;
+        width: 17px;
+        height: 2px;
+        background-color: $color-black;
+        cursor: pointer;
+        transform-origin: center;
+        transition: transform .3s ease-out;
+
+        &:hover {
+            transform: rotate(1turn);
+            transform-origin: center;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-top: 2px solid $color-black;
+            border-left: 2px solid $color-black;
+            width: 8px;
+            height: 8px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .header__logo {
+        text-align: center;
+        width: 100%;
+        padding: 14px 0 4px;
+        box-shadow: 0px 2px 0px $color-black-opacity;
+
+        &--img {
+            width: 162px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .header {
+        .header__logo {
+            padding: 30px 0;
+
+            &--img {
+                width: 200px;
+            }
+        }
+    }
+}

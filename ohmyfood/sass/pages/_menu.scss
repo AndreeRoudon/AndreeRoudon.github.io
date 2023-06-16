@@ -1,0 +1,293 @@
+// Fond image pour chaque restaurants
+.fond {
+    position: relative;
+    height: 225px;
+
+    &__img {
+        position: absolute;
+        background-size: cover;
+        background-position: 0% 60%;
+        width: 100%;
+        height: 275px;
+    }
+}
+
+// menu des restaurants -> element list + bouton
+.main-menu {
+    position: relative;
+    background-color: $color-light-white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    .content-menu {
+        padding: 0 13px;
+
+        &__intro {
+            display: flex;
+            align-items: center;
+            padding: 32px 5px 0;
+            gap: 18px;
+
+            &--title {
+                font-family: 'Shrikhand', cursive;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            .fa-solid {
+                @include heart;
+            }
+        }
+    }
+
+    .menu-element {
+        margin-top: 40px;
+
+        .menu-element__title {
+            display: inline-block;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 16px;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 2px;
+                background-color: $color-light-green;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .menu-element__list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            &__item {
+                position: relative;
+                cursor: pointer;
+                box-shadow: 0px 4px 15px $color-black-opacity;
+                background-color: $color-white;
+                height: 69px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 15px;
+                overflow: hidden;
+                opacity: 0;
+
+                &__text {
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 300;
+                }
+
+                &--price {
+                    transition: transform .4s ease-in-out;
+                    transform: translateX(0);
+                    transform-origin: right;
+                }
+
+                /* A corriger text ellipsis error*/
+                &--title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 100%;
+                }
+
+                &--parag {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    flex-grow: 1;
+                    width: 100%;
+                }
+
+                &--select {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 59px;
+                    height: 100%;
+                    background-color: $color-light-green;
+                    transform-origin: right;
+                    transform: translateX(100%);
+                    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+                    opacity: 0.1;
+                    display: grid;
+                    place-items: center;
+
+                    .fa-solid {
+                        padding: 4px;
+                        color: $color-light-green;
+                        background-color: $color-white;
+                        border-radius: 50%;
+                        transition: transform .35s .15s ease-in-out;
+                    }
+                }
+
+                // Au survol du selector 
+                &:hover {
+                    .menu-element__list__item--parag {
+                        flex-grow: initial;
+                        width: calc(100% - 82px);
+                    }
+
+                    .menu-element__list__item--title {
+                        width: 80%;
+                    }
+
+                    .menu-element__list__item--select {
+                        transform: translateX(0%);
+                        opacity: 1;
+                        transform-origin: left;
+                    }
+
+                    .fa-solid {
+                        transform: rotate(1turn);
+                    }
+
+                    .menu-element__list__item--price {
+                        transform: translateX(-59px);
+                        transform-origin: left;
+                    }
+                }
+            }
+
+            //Animation des entrées
+            .animation-entree {
+                animation: entreeFadeIn .6s ease-in-out forwards;
+
+                &:nth-child(2) {
+                    animation-delay: .2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 2*(.2s);
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 3*(.2s);
+                }
+            }
+
+            //Animation des plats
+            .animation-plat {
+                animation: platFadeIn .6s ease-in-out forwards;
+                animation-delay: .6s;
+
+                &:nth-child(2) {
+                    animation-delay: .6s + .2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: .6s + (2*(.2s));
+                }
+            }
+
+            //Animation des desserts
+            .animation-dessert {
+                animation: dessertFadeIn .6s ease-in-out forwards;
+                animation-delay: 1.2s;
+
+                &:nth-child(2) {
+                    animation-delay: 1.2s + .2s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 1.2s + (2*(.2s));
+                }
+            }
+        }
+    }
+
+    .btn-gradient {
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+
+        &__command {
+            padding: 16px 48px;
+            @include btn-gradient;
+        }
+    }
+}
+
+// Taille d'écran en version desktop et tablette
+@media screen and (min-width: 767px) {
+    .fond {
+        height: 342px;
+
+        &__img {
+            height: 375px;
+        }
+    }
+
+    .main-menu {
+        position: relative;
+        max-width: 1055px;
+        margin: auto;
+
+        .content-menu {
+            max-width: 635px;
+            margin: auto;
+
+            &__intro {
+                justify-content: center;
+                gap: 24px;
+            }
+        }
+    }
+
+}
+
+//Animation des entrées
+@keyframes entreeFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+//Animation des plats
+@keyframes platFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+//Animation des desserts
+@keyframes dessertFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

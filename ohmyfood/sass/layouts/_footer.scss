@@ -1,0 +1,53 @@
+// Pied de page logo + lien
+.footer {
+    padding: 22px 25px;
+    background: $color-dark-grey;
+    color: $color-white;
+
+    .footer__logo {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+    }
+
+    .footer__social {
+        margin-top: 16px;
+        list-style: none;
+
+        &--object {
+            display: flex;
+            gap: 10px;
+        }
+
+        &--item {
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 7px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+}
+
+// Taille d'écran en version desktop et tablette
+@media screen and (min-width: 767px) {
+    .footer {
+        padding: 64px 5vw 30px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+
+        .footer__social {
+            margin-top: 0;
+            display: flex;
+            gap: 20px;
+            margin-right: 6vw;
+        }
+    }
+}

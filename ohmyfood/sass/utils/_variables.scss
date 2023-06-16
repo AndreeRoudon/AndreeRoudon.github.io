@@ -1,0 +1,38 @@
+// Couleur primaire
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+
+// Couleur degradé
+$color-gradient: linear-gradient(193.33deg, $color-primary -11.44%, $color-secondary 123.93%);
+$color-gradient-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
+    linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
+
+// Couleur de la barre de chargement du loader
+$color-loader: #67d8bc;
+
+// Autres couleurs
+$color-grey: #D2D2D2;
+$color-light-grey: #EAEAEA;
+$color-dark-grey: #353535;
+$color-grey-fa: #7E7E7E;
+
+$color-black: #000;
+$color-white: #FFF;
+$color-light-white: #F7F7F7;
+
+//Couleur du élement "nouveau restaurant" et de son texte + animation select
+$color-light-green: #99E2D0;
+$color-dark-green: #008766;
+
+// Effet d'Ombres sur un élement
+$color-black-opacity: rgba(0, 0, 0, 0.15);
+
+// Effet d'ombres au survol
+$color-black-opacity-hover: rgba(0, 0, 0, 0.30);
+$color-black-hover-opacity: rgba(147, 86, 220, 0.2);
+
+/*
+// taille de font
+$font-text: 16px;
+$font-title: 24px;
+*/

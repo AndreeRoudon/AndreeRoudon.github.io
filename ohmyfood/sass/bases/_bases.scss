@@ -1,0 +1,23 @@
+// Base de la page web
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 767px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        max-width: none;
+        width: 100%;
+    }
+}

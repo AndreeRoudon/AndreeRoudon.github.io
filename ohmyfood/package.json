@@ -1,0 +1,11 @@
+{
+  "name": "p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet Ohmyfood : Dinamisez une page web avec des animations",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/css/style.css"
+  },
+  "author": "Andree Roudon",
+  "license": "ISC"
+}
