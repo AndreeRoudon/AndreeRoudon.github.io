@@ -1,4 +1,5 @@
-Projet Ohmyfood : Dinamisez une page web avec des animations
+Projet Ohmyfood : Dynamisez une page web avec des animations
+
 Développé en juin 2023
 
 Github Pages : https://andreeroudon.github.io/ohmyfood/
