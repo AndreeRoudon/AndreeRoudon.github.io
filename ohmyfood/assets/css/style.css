@@ -20,15 +20,6 @@ body {
     width: 100%;
   }
 }
-/*
-// taille de font
-$font-text: 16px;
-$font-title: 24px;
-*/
-.container-home {
-  font-family: "Roboto", sans-serif;
-}
-
 .intro {
   display: flex;
   flex-direction: column;
@@ -212,17 +203,11 @@ $font-title: 24px;
 }
 
 @media screen and (min-width: 767px) {
-  .home-header .home-header__logo {
-    padding: 30px 0;
-  }
-  .home-header .home-header__logo--img {
-    width: 200px;
-  }
-  .home-header .home-header__intro--title {
+  .intro__heading--title {
     max-width: none;
     font-size: 40px;
   }
-  .home-header .home-header__intro--parag {
+  .intro__heading--parag {
     max-width: none;
   }
   .fonctionnement {
@@ -230,11 +215,11 @@ $font-title: 24px;
     max-width: 1080px;
     margin: auto;
   }
-  .fonctionnement .fonctionnement__list {
+  .fonctionnement__list {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .fonctionnement .fonctionnement__list .fonctionnement__item {
+  .fonctionnement__list .fonctionnement__item {
     width: 320px;
   }
   .restaurants {
@@ -263,10 +248,22 @@ $font-title: 24px;
   position: relative;
   height: 225px;
 }
+.fond__delice {
+  background-image: url("../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.fond__francaise {
+  background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.fond__note {
+  background-image: url("../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.fond__palette {
+  background-image: url("../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
 .fond__img {
   position: absolute;
   background-size: cover;
-  background-position: 0% 60%;
+  background-position: center;
   width: 100%;
   height: 275px;
 }
@@ -482,6 +479,7 @@ $font-title: 24px;
   }
   .fond__img {
     height: 375px;
+    background-position: 0% 60%;
   }
   .main-menu {
     position: relative;
