@@ -15,143 +15,32 @@ body {
   margin: 0 auto;
 }
 
-header {
-  border-bottom: 1px solid hsl(0deg, 0%, 100%);
-  position: relative;
-}
-header .fond-profil {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-image: url("../assets/images/photo_profil.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 450px;
-  height: 720px;
-  right: 0;
-}
-header .nav {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 1rem 2rem 0;
-}
-header .nav span {
-  font-size: 32px;
-  font-weight: 700;
-}
-header .nav__icons {
-  width: 15rem;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-header .nav img {
-  width: 24px;
-  height: 24px;
-}
-header .intro {
-  position: relative;
-  z-index: 2;
-  margin: 5rem 0 15rem;
-}
-header .intro h1, header .intro h2 {
-  font-size: 88px;
-  word-spacing: -2.5px;
-}
-header .intro .nom {
-  text-decoration: underline hsl(153deg, 71%, 59%);
-}
-header .intro p {
-  margin: 3rem 0;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 500;
-  width: 30rem;
-}
-header .intro .contact {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid hsl(153deg, 71%, 59%);
-  cursor: pointer;
-}
-header .intro .contact:hover {
-  color: hsl(153deg, 71%, 59%);
-}
-
-aside {
+.competence {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
   grid-row-gap: 50px;
   margin: 5rem 0;
 }
-aside .one {
-  grid-area: 1/1/2/2;
-}
-aside .two {
-  grid-area: 1/2/2/3;
-}
-aside .three {
-  grid-area: 1/3/2/4;
-}
-aside .four {
-  grid-area: 2/1/3/2;
-}
-aside .five {
-  grid-area: 2/2/3/3;
-}
-aside .six {
-  grid-area: 2/3/3/4;
-}
-aside .block h1 {
+.competence__item--language {
   font-size: 48px;
 }
-aside .block p {
+.competence__item--text {
   font-size: 18px;
 }
 
-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 92px repeat(3, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
+.projects {
   margin-bottom: 5rem;
 }
-section .one {
-  grid-area: 2/1/3/2;
-}
-section .two {
-  grid-area: 2/2/3/3;
-}
-section .three {
-  grid-area: 3/1/4/2;
-}
-section .four {
-  grid-area: 3/2/4/3;
-}
-section .five {
-  grid-area: 4/1/5/2;
-}
-section .six {
-  grid-area: 4/2/5/3;
-}
-section .title {
-  grid-area: 1/1/2/3;
+.projects__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
 }
-section .title h1 {
+.projects__heading--title {
   font-size: 72px;
 }
-section .title span {
+.projects__heading--contact {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -159,15 +48,24 @@ section .title span {
   border-bottom: 2px solid hsl(153deg, 71%, 59%);
   cursor: pointer;
 }
-section .title span:hover {
+.projects__heading--contact:hover {
   color: hsl(153deg, 71%, 59%);
 }
-section .box .web-design {
+.projects__listPro {
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+}
+.projects__item {
+  /********************************/
+}
+.projects__item .design {
   position: relative;
   margin-bottom: 1rem;
   cursor: pointer;
 }
-section .box .web-design .infos {
+.projects__item .design .infos {
   font-size: 24px;
   position: absolute;
   transition: 0.4s ease-in;
@@ -180,32 +78,31 @@ section .box .web-design .infos {
   justify-content: space-between;
   align-items: center;
 }
-section .box .web-design .infos span {
+.projects__item .design .infos span {
   padding-bottom: 10px;
   border-bottom: 2px solid hsl(153deg, 71%, 59%);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
 }
-section .box .web-design .infos span:hover {
+.projects__item .design .infos span:hover {
   color: hsl(153deg, 71%, 59%);
 }
-section .box .web-design:hover img {
+.projects__item .design:hover img {
   filter: brightness(20%);
 }
-section .box .web-design:hover .infos {
+.projects__item .design:hover .infos {
   opacity: 1;
 }
-section .box h2 {
+.projects__item h2 {
   font-size: 24px;
   font-weight: 700;
 }
-section .box p {
+.projects__item p {
   font-size: 18px;
   word-spacing: 12px;
 }
 
-/********************************/
 footer {
   padding: 3rem 0;
   background-color: hsl(0deg, 0%, 14%);
@@ -292,6 +189,74 @@ footer .copyright .icons {
 footer .copyright img {
   width: 24px;
   height: 24px;
+}
+
+header {
+  border-bottom: 1px solid hsl(0deg, 0%, 100%);
+  position: relative;
+}
+header .fond-profil {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-image: url("../assets/images/photo_profil.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 450px;
+  height: 720px;
+  right: 0;
+}
+header .nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem 2rem 0;
+}
+header .nav__logo {
+  font-size: 32px;
+  font-weight: 700;
+}
+header .nav__icons {
+  width: 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+header .nav img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+header .intro {
+  position: relative;
+  z-index: 2;
+  margin: 5rem 0 15rem;
+}
+header .intro__title {
+  font-size: 88px;
+  word-spacing: -2.5px;
+}
+header .intro__nom {
+  text-decoration: underline hsl(153deg, 71%, 59%);
+}
+header .intro__text {
+  margin: 3rem 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  width: 30rem;
+}
+header .intro__contact {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid hsl(153deg, 71%, 59%);
+  cursor: pointer;
+}
+header .intro__contact:hover {
+  color: hsl(153deg, 71%, 59%);
 }
 
 /*# sourceMappingURL=style.css.map */

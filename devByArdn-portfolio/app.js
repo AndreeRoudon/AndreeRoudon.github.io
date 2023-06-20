@@ -1,8 +1,8 @@
-cv = document.querySelector(".cv");
+const cv = document.querySelector(".cv");
 cv.addEventListener('click', () => {
     window.location.href = "https://andreeroudon.github.io/CV-AndreeRoudon/";
 });
-cv1 = document.querySelector(".cv1");
+const cv1 = document.querySelector(".cv1");
 cv1.addEventListener('click', () => {
     window.location.href = "https://andreeroudon.github.io/CV-AndreeRoudon/";
 });
@@ -27,7 +27,7 @@ const viewCode = {
 }
 
 viewProject[1].addEventListener('click', () => {
-    window.location.href = "https://andreeroudon.github.io/news-homepage/";
+    window.location.href = "https://andreeroudon.github.io/ohmyfood/";
 });
 viewProject[2].addEventListener('click', () => {
     window.location.href = "https://andreeroudon.github.io/blogr-landing/";
@@ -43,7 +43,7 @@ viewProject[5].addEventListener('click', () => {
 });
 
 viewCode[1].addEventListener('click', () => {
-    window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/news-homepage";
+    window.location.href = "https://github.com/AndreeRoudon/ohmyfood";
 });
 viewCode[2].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/blogr-landing";

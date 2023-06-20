@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,167 +11,185 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <title>Aroudon | developer portfolio</title>
 </head>
+
 <body>
+  <!-- Entête de la page -->
   <header class="container">
     <div class="fond-profil"></div>
     <nav class="nav">
-      <span>devByArdn</span>
+      <span class="nav__logo">devByArdn</span>
       <div class="nav__icons">
-        <a href="https://github.com/AndreeRoudon"><img src="assets/images/icon-github.svg"></a>
+        <a href="https://github.com/AndreeRoudon"><img 
+          src="assets/images/icon-github.svg"></a>
         <img src="assets/images/icon-frontend-mentor.svg">
-        <a href="https://www.linkedin.com/in/andr%C3%A9%C3%A9-roudon-801a101b0/"><img src="assets/images/icon-linkedin.svg"></a>
+        <a href="https://www.linkedin.com/in/andr%C3%A9%C3%A9-roudon-801a101b0/"><img
+          src="assets/images/icon-linkedin.svg"></a>
         <img src="assets/images/icon-twitter.svg">
       </div>
     </nav>
     <div class="intro">
-      <h1>Nice to meet you!</h1>
-      <h2>I'm <span class="nom"> Andree Roudon</span>.</h2>
-      <p>Based in the France, I'm a front-end developer passionate about
-      building web apps that users love.</p>
-      <span class="contact cv">CONTACT ME</span>
+      <h1 class="intro__title">Nice to meet you!<br>
+      I'm <span class="intro__nom"> Andree Roudon</span>.</h1>
+      <p class="intro__text">Based in the France, I'm a front-end developer passionate about
+        building web apps that users love.</p>
+      <span class="intro__contact cv">CONTACT ME</span>
     </div>
   </header>
+
+  <!-- Contenu de la page -->
   <main class="container">
-    <aside>
-        <div class="block one">
-          <h1>HTML</h1>
-          <p>1 Years Experience</p>
-        </div>
-        <div class="block two">
-          <h1>CSS</h1>
-          <p>1 Years Experience</p>
-        </div>
-        <div class="block three">
-          <h1>JavaScript</h1>
-          <p>3 Months Experience</p>
-        </div>
-        <div class="block four">
-          <h1>Sass</h1>
-          <p>6 Months Experience</p>
-        </div>
-        <div class="block five">
-          <h1>React</h1>
-          <p>1 Month Experience</p>
-        </div>
-        <div class="block six">
-          <h1>Vite</h1>
-          <p>1 Months Experience</p>
-        </div>
+    <!-- Stack technique, languages utilisés pour les projets -->
+    <aside class="competence">
+      <div class="competence__item">
+        <h1 class="competence__item--language">HTML</h1>
+        <p class="competence__item--text">1 Years Experience</p>
+      </div>
+      <div class="competence__item">
+        <h1 class="competence__item--language">CSS</h1>
+        <p class="competence__item--text">1 Years Experience</p>
+      </div>
+      <div class="competence__item">
+        <h1 class="competence__item--language">JavaScript</h1>
+        <p class="competence__item--text">3 Months Experience</p>
+      </div>
+      <div class="competence__item">
+        <h1 class="competence__item--language">Sass</h1>
+        <p class="competence__item--text">6 Months Experience</p>
+      </div>
+      <div class="competence__item">
+        <h1 class="competence__item--language">React</h1>
+        <p class="competence__item--text">1 Month Experience</p>
+      </div>
+      <div class="competence__item">
+        <h1 class="competence__item--language">Vite</h1>
+        <p class="competence__item--text">1 Months Experience</p>
+      </div>
     </aside>
 
+    <!-- Présentation des projets réalisés -->
+    <section class="projects">
 
-    <section>
-      <div class="title">
-        <h1>Projects</h1>
-        <span class="cv1">CONTACT ME</span>
+      <div class="projects__heading">
+        <h1 class="projects__heading--title">Projects</h1>
+        <span class="projects__heading--contact cv1">CONTACT ME</span>
       </div>
 
-      <div class="one box">
-        <div class="web-design">
-          <img src="assets/images/news-homepage.jpg" width="540px" height="400px" alt="design-portfolio">
-          <div class="infos">
-            <span id="view-project1">VIEW PROJECT</span>
-            <span id="view-code1">VIEW CODE</span>
+      <!-- Liste des projets en cours et terminé -->
+      <div class="projects__listPro">
+
+        <div class="projects__item"> <!-- Partie a refaire pour chaque item -->
+          <div class="design">
+            <img src="assets/images/ohmyfood.jpg" width="540px" height="400px" alt="ohmyfood">
+            <div class="infos">
+              <span id="view-project1">VIEW PROJECT</span>
+              <span id="view-code1">VIEW CODE</span>
+            </div>
           </div>
+          <h2>Ohmyfood Website</h2>
+          <p>HTML SCSS</p>
         </div>
-        <h2>News Homepage main</h2>
-        <p>HTML SCSS JavaScript</p>
-      </div>
-      <div class="two box">
-        <div class="web-design">
-          <img src="assets/images/blogr-landing-page.jpg" width="540px" height="400px" alt="landing-page">
-          <div class="infos">
-            <span id="view-project2">VIEW PROJECT</span>
-            <span id="view-code2">VIEW CODE</span>
+
+        <div class="projects__item">
+          <div class="design">
+            <img src="assets/images/blogr-landing-page.jpg" width="540px" height="400px" alt="landing-page">
+            <div class="infos">
+              <span id="view-project2">VIEW PROJECT</span>
+              <span id="view-code2">VIEW CODE</span>
+            </div>
           </div>
+          <h2>E-learning Landing Page</h2>
+          <p>HTML SCSS JavaScript</p>
         </div>
-        <h2>E-learning Landing Page</h2>
-        <p>HTML SCSS JavaScript</p>
-      </div>
-      <div class="three box">
-        <div class="web-design">
-          <img src="assets/images/dine-restaurant.jpg" width="540px" height="400px" alt="web-app">
-          <div class="infos">
-            <span id="view-project3">VIEW PROJECT</span>
-            <span id="view-code3">VIEW CODE</span>
+
+        <div class="projects__item">
+          <div class="design">
+            <img src="assets/images/dine-restaurant.jpg" width="540px" height="400px" alt="web-app">
+            <div class="infos">
+              <span id="view-project3">VIEW PROJECT</span>
+              <span id="view-code3">VIEW CODE</span>
+            </div>
           </div>
+          <h2>Dine Restaurent Website</h2>
+          <p>HTML SCSS JavaScript</p>
         </div>
-        <h2>Dine Restaurent Website</h2>
-        <p>HTML SCSS JavaScript</p>
+
+        <div class="projects__item">
+          <div class="design">
+            <img src="assets/images/metropolis.png" width="540px" height="400px" alt="web-app-enter">
+            <div class="infos">
+              <span id="view-project4">VIEW PROJECT</span>
+              <span id="view-code4">VIEW CODE</span>
+            </div>
+          </div>
+          <h2>Metropolis Series</h2>
+          <p>HTML SCSS</p>
+        </div>
+
+        <div class="projects__item">
+          <div class="design">
+            <img src="assets/images/space-tourism.jpg" width="540px" height="400px" alt="memory-game">
+            <div class="infos">
+              <span id="view-project5">VIEW PROJECT</span>
+              <span id="view-code5">VIEW CODE</span>
+            </div>
+          </div>
+          <h2>Space Tourism Website</h2>
+          <p>HTML CSS JavaScript</p>
+        </div>
+
+        <div class="projects__item">
+          <div class="design">
+            <img src="assets/images/thumbnail-project-6-large.webp" width="540px" height="400px" alt="art-gallery">
+            <div class="infos">
+              <span id="view-project6">VIEW PROJECT</span>
+              <span id="view-code6">VIEW CODE</span>
+            </div>
+          </div>
+          <h2>Art Gallery Showcase</h2>
+          <p>HTML CSS JavaScript</p>
+        </div>
 
       </div>
-      <div class="four box">
-        <div class="web-design">
-          <img src="assets/images/metropolis.png" width="540px" height="400px" alt="web-app-enter">
-          <div class="infos">
-            <span id="view-project4">VIEW PROJECT</span>
-            <span id="view-code4">VIEW CODE</span>
-          </div>
-        </div>
-        <h2>Metropolis Series</h2>
-        <p>HTML SCSS</p>
 
-      </div>
-      <div class="five box">
-        <div class="web-design">
-          <img src="assets/images/space-tourism.jpg" width="540px" height="400px" alt="memory-game">
-          <div class="infos">
-            <span id="view-project5">VIEW PROJECT</span>
-            <span id="view-code5">VIEW CODE</span>
-          </div>
-        </div>
-        <h2>Space Tourism Website</h2>
-        <p>HTML CSS JavaScript</p>
-      </div>
-      <div class="six box">
-        <div class="web-design">
-          <img src="assets/images/thumbnail-project-6-large.webp" width="540px" height="400px" alt="art-gallery">
-          <div class="infos">
-            <span id="view-project6">VIEW PROJECT</span>
-            <span id="view-code6">VIEW CODE</span>
-          </div>
-        </div>
-        <h2>Art Gallery Showcase</h2>
-        <p>HTML CSS JavaScript</p>
-      </div>
     </section>
-</main>
+  </main>
 
-
-<footer>
-  <div class="container">
-    <div class="contact">
-      <div class="left">
-        <h1>Contact</h1>
-        <p>I would love to hear about your project and how I could help. Please 
-        fill in the form, and I’ll get back to you as soon as possible.</p>
+  <footer>
+    <div class="container">
+      <div class="contact">
+        <div class="left">
+          <h1>Contact</h1>
+          <p>I would love to hear about your project and how I could help. Please
+            fill in the form, and I'll get back to you as soon as possible.</p>
+        </div>
+        <form method="post">
+          <div class="txt_field">
+            <input placeholder="NAME" type="text" name="name">
+          </div>
+          <div class="txt_field">
+            <input placeholder="EMAIL" type="email" name="email">
+          </div>
+          <div class="txt_field">
+            <textarea placeholder="MESSAGE"></textarea>
+          </div>
+          <div class="send-msg">
+            <input type="submit" value="SEND MESSAGE"></input>
+          </div>
+        </form>
       </div>
-      <form method="post">
-        <div class="txt_field">
-          <input placeholder="NAME" type="text">
+      <div class="copyright">
+        <span>devByArdn</span>
+        <div class="icons">
+          <a href="https://github.com/AndreeRoudon"><img src="assets/images/icon-github.svg"></a>
+          <img src="assets/images/icon-frontend-mentor.svg">
+          <a href="https://www.linkedin.com/in/andr%C3%A9%C3%A9-roudon-801a101b0/"><img
+              src="assets/images/icon-linkedin.svg"></a>
+          <img src="assets/images/icon-twitter.svg">
         </div>
-        <div class="txt_field">
-          <input placeholder="EMAIL" type="email">
-        </div>
-        <div class="txt_field">
-          <textarea placeholder="MESSAGE"></textarea>
-        </div>
-        <div class="send-msg">
-          <input type="submit" value="SEND MESSAGE"></input>
-        </div>
-      </form>
-    </div>
-    <div class="copyright">
-      <span>devByArdn</span>
-      <div class="icons">
-        <a href="https://github.com/AndreeRoudon"><img src="assets/images/icon-github.svg"></a>
-        <img src="assets/images/icon-frontend-mentor.svg">
-        <a href="https://www.linkedin.com/in/andr%C3%A9%C3%A9-roudon-801a101b0/"><img src="assets/images/icon-linkedin.svg"></a>
-        <img src="assets/images/icon-twitter.svg">
       </div>
     </div>
-  </div>
-</footer>
-<script src="app.js"></script>
+  </footer>
+  <script src="app.js"></script>
 </body>
+
 </html>

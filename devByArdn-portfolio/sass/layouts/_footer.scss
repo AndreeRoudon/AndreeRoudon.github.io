@@ -1,0 +1,88 @@
+footer{
+    padding: 3rem 0;
+    background-color: hsl(0, 0, 14%);
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 5rem;
+        .left{
+            width: 28rem;
+            h1{
+                font-size: 88px;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        form{
+            padding: 1rem 0 5rem;
+            width: 25rem;
+            .txt_field{
+                border-bottom: 1px solid hsl(0, 0%, 100%);
+                margin-bottom: 20px;
+                input{
+                    width: 100%;
+                    color: hsl(0, 0%, 100%);
+                    padding: 0 20px;
+                    height: 40px;
+                    font-size: 16px;
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+                textarea{
+                    width: 100%;
+                    padding: 0 20px;
+                    font-size: 16px;
+                    height: 100px;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    resize: none;
+                    color: hsl(0, 0%, 100%);
+                }
+            }
+            .send-msg{
+                text-align: end;
+                input{
+                    color: hsl(0, 0%, 100%);
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid hsl(153, 71%, 59%);
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    &:hover{
+                        color: hsl(153, 71%, 59%);
+                    } 
+                }
+            }
+        }
+    }
+
+    .copyright{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+        border-top: 1px solid hsl(0, 0%, 100%);
+        span{
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .icons{
+            width: 15rem;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
