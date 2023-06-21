@@ -11,6 +11,12 @@ body{
 }
 
 .container{
-    width: 1110px;
+    max-width: 1110px;
     margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .container{
+        margin: 0 30px;
+    }
 }
