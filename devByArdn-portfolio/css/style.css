@@ -146,26 +146,28 @@ footer .contact {
   justify-content: space-between;
   padding-bottom: 5rem;
 }
-footer .contact .left {
+footer .contact__text {
   max-width: 28rem;
+  margin-right: min(50px, 5%);
 }
-footer .contact .left h1 {
+footer .contact__text--title {
   font-size: 88px;
   margin-bottom: 1rem;
 }
-footer .contact .left p {
+footer .contact__text--parag {
   font-size: 18px;
   line-height: 28px;
 }
-footer .contact form {
+footer .contact .formulaire {
   padding: 1rem 0 5rem;
-  width: 25rem;
+  width: 100%;
+  max-width: 25rem;
 }
-footer .contact form .txt_field {
+footer .contact .formulaire__txt_field {
   border-bottom: 1px solid hsl(0deg, 0%, 100%);
   margin-bottom: 20px;
 }
-footer .contact form .txt_field input {
+footer .contact .formulaire__txt_field input {
   width: 100%;
   color: hsl(0deg, 0%, 100%);
   padding: 0 20px;
@@ -175,7 +177,7 @@ footer .contact form .txt_field input {
   background: none;
   outline: none;
 }
-footer .contact form .txt_field textarea {
+footer .contact .formulaire__txt_field textarea {
   width: 100%;
   padding: 0 20px;
   font-size: 16px;
@@ -186,10 +188,10 @@ footer .contact form .txt_field textarea {
   resize: none;
   color: hsl(0deg, 0%, 100%);
 }
-footer .contact form .send-msg {
+footer .contact .formulaire__send-msg {
   text-align: end;
 }
-footer .contact form .send-msg input {
+footer .contact .formulaire__send-msg input {
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
   background: none;
@@ -201,12 +203,13 @@ footer .contact form .send-msg input {
   font-weight: 700;
   letter-spacing: 2px;
 }
-footer .contact form .send-msg input:hover {
+footer .contact .formulaire__send-msg input:hover {
   color: hsl(153deg, 71%, 59%);
 }
 footer .copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 3rem;
   border-top: 1px solid hsl(0deg, 0%, 100%);
 }
@@ -215,9 +218,10 @@ footer .copyright span {
   font-weight: 700;
 }
 footer .copyright .icons {
-  width: 15rem;
+  max-width: 15rem;
   display: flex;
   justify-content: space-between;
+  gap: 40px;
   cursor: pointer;
 }
 footer .copyright img {
@@ -225,20 +229,29 @@ footer .copyright img {
   height: 24px;
 }
 
+@media (max-width: 1024px) {
+  footer .contact__text--title {
+    font-size: 60px;
+  }
+}
 @media (max-width: 768px) {
   footer .contact {
     flex-direction: column;
     align-items: center;
     gap: 50px;
   }
-  footer .contact .left {
+  footer .contact__text {
     text-align: center;
   }
-  footer .contact .left h1 {
+  footer .contact__text--title {
     font-size: 40px;
   }
-  footer .contact .left p {
+  footer .contact__text--parag {
     font-size: 16px;
+  }
+  footer .copyright {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 header {
@@ -337,6 +350,7 @@ header .intro__contact:hover {
     font-size: 40px;
   }
   header .intro__text {
+    margin: 3rem auto;
     font-size: 16px;
   }
 }

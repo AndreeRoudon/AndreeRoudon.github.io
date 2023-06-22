@@ -5,21 +5,23 @@ footer{
         display: flex;
         justify-content: space-between;
         padding-bottom: 5rem;
-        .left{
+        &__text{
             max-width: 28rem;
-            h1{
+            margin-right: min(50px, 5%);
+            &--title{
                 font-size: 88px;
                 margin-bottom: 1rem;
             }
-            p{
+            &--parag{
                 font-size: 18px;
                 line-height: 28px;
             }
         }
-        form{
+        .formulaire{
             padding: 1rem 0 5rem;
-            width: 25rem;
-            .txt_field{
+            width: 100%;
+            max-width: 25rem;
+            &__txt_field{
                 border-bottom: 1px solid hsl(0, 0%, 100%);
                 margin-bottom: 20px;
                 input{
@@ -44,7 +46,7 @@ footer{
                     color: hsl(0, 0%, 100%);
                 }
             }
-            .send-msg{
+            &__send-msg{
                 text-align: end;
                 input{
                     color: hsl(0, 0%, 100%);
@@ -68,6 +70,7 @@ footer{
     .copyright{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding-top: 3rem;
         border-top: 1px solid hsl(0, 0%, 100%);
         span{
@@ -75,14 +78,27 @@ footer{
             font-weight: 700;
         }
         .icons{
-            width: 15rem;
+            max-width: 15rem;
             display: flex;
             justify-content: space-between;
+            gap: 40px;
             cursor: pointer;
         }
         img{
             width: 24px;
             height: 24px;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    footer{
+        .contact{
+            &__text{
+                &--title{
+                    font-size: 60px;
+                }
+            }
         }
     }
 }
@@ -93,15 +109,19 @@ footer{
             flex-direction: column;
             align-items: center;
             gap: 50px;
-            .left{
+            &__text{
                 text-align: center;
-                h1{
+                &--title{
                     font-size: 40px;
                 }
-                p{
+                &--parag{
                     font-size: 16px;
                 }
             }
+        }
+        .copyright{
+            flex-direction: column;
+            gap: 40px;
         }
     }
 }
