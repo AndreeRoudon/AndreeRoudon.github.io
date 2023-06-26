@@ -317,41 +317,69 @@ aside .block-list .right p {
   top: 0;
   left: 0;
 }
-.content-anim .images {
-  width: 540px;
-  height: 600px;
-  position: relative;
+.content-anim .images .image:not(.active) {
+  animation: imageFadeOn 0.4s ease-out forwards;
 }
-.content-anim .images .image {
-  width: 100%;
+.content-anim .images[data-image-slide="1"] .image[data-image-slide="1"] {
+  animation: imageFadeIn 0.4s ease-out forwards;
+}
+.content-anim .images[data-image-slide="2"] .image[data-image-slide="2"] {
+  animation: imageFadeIn 0.4s ease-out forwards;
+}
+.content-anim .images[data-image-slide="3"] .image[data-image-slide="3"] {
+  animation: imageFadeIn 0.4s ease-out forwards;
+}
+.content-anim .description {
+  position: relative;
   height: 100%;
-  background-size: cover;
+  padding-left: 125px;
+  width: 100%;
+}
+.content-anim .description .title {
+  height: 50px;
+  width: 100%;
+}
+.content-anim .description .title h1 {
+  font-size: 48px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 125px;
+}
+.content-anim .description h1[data-title-slide="1"],
+.content-anim .description h1[data-title-slide="2"],
+.content-anim .description h1[data-title-slide="3"] {
+  animation: textFadeOn 0.4s ease-out forwards;
+}
+.content-anim .description h1[data-title-slide="1"].active,
+.content-anim .description h1[data-title-slide="2"].active,
+.content-anim .description h1[data-title-slide="3"].active {
+  animation: textFadeIn 0.4s ease-out forwards;
+}
+.content-anim .description .text {
+  position: relative;
+  height: 120px;
+}
+.content-anim .description .text p {
   position: absolute;
   top: 0;
   left: 0;
-}
-.content-anim .images .image:not(.active) {
-  opacity: 0;
-}
-.content-anim .images .image.active {
-  opacity: 1;
-}
-.content-anim .left {
-  position: relative;
-  height: 468px;
-  padding-left: 125px;
-}
-.content-anim .left h1 {
-  font-size: 48px;
-  font-weight: 400;
-}
-.content-anim .left p {
   color: hsl(218deg, 21%, 18%);
   margin-top: 15px;
   font-size: 20px;
   line-height: 30px;
 }
-.content-anim .left button {
+.content-anim .description p[data-text-slide="1"],
+.content-anim .description p[data-text-slide="2"],
+.content-anim .description p[data-text-slide="3"] {
+  animation: textFadeOn 0.4s ease-out forwards;
+}
+.content-anim .description p[data-text-slide="1"].active,
+.content-anim .description p[data-text-slide="2"].active,
+.content-anim .description p[data-text-slide="3"].active {
+  animation: textFadeIn 0.4s ease-out forwards;
+}
+.content-anim .description button {
   margin: 3rem 0 5rem;
   color: hsl(0deg, 0%, 100%);
   background: hsl(0deg, 0%, 7%);
@@ -362,12 +390,12 @@ aside .block-list .right p {
   letter-spacing: 2px;
   cursor: pointer;
 }
-.content-anim .left button:hover {
+.content-anim .description button:hover {
   border: 1px solid hsl(0deg, 0%, 7%);
   background: hsl(0deg, 0%, 100%);
   color: hsl(0deg, 0%, 7%);
 }
-.content-anim .left ul > li {
+.content-anim .description ul > li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -376,25 +404,29 @@ aside .block-list .right p {
   margin-top: 1rem;
   cursor: pointer;
 }
-.content-anim .left ul > li:after {
+.content-anim .description ul > li:after {
   content: "";
   position: absolute;
   width: 95px;
   height: 1px;
   background: hsl(27deg, 22%, 51%);
-  left: 0;
+  left: -135px;
+  transform: scaleX(0);
 }
-.content-anim .left ul > li:nth-child(1) {
-  opacity: 1;
+.content-anim .description li[data-btn-slide="1"],
+.content-anim .description li[data-btn-slide="2"],
+.content-anim .description li[data-btn-slide="3"] {
+  animation: btnFadeOn 0.4s ease-out forwards;
 }
-.content-anim .left ul > li:nth-child(2), .content-anim .left ul > li:nth-child(3) {
-  opacity: 0.5;
+.content-anim .description li[data-btn-slide="1"].active,
+.content-anim .description li[data-btn-slide="2"].active,
+.content-anim .description li[data-btn-slide="3"].active {
+  animation: btnFadeIn 0.4s ease-out forwards;
 }
-.content-anim .left ul > li:nth-child(2):after, .content-anim .left ul > li:nth-child(3):after {
-  content: none;
-}
-.content-anim .left ul > li:active {
-  opacity: 1;
+.content-anim .description li[data-btn-slide="1"].active:after,
+.content-anim .description li[data-btn-slide="2"].active:after,
+.content-anim .description li[data-btn-slide="3"].active:after {
+  transform: scaleX(1);
 }
 
 footer {
@@ -447,6 +479,67 @@ footer .bottom table {
 }
 footer .bottom table td {
   padding: 5px 0;
+}
+
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes imageFadeOn {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+}
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes textFadeOn {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+}
+@keyframes btnFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(2%);
+  }
+}
+@keyframes btnFadeOn {
+  0% {
+    opacity: 1;
+    transform: translateX(2%);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
