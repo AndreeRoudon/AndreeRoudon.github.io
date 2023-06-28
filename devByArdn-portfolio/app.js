@@ -30,7 +30,7 @@ viewProject[1].addEventListener('click', () => {
     window.location.href = "https://andreeroudon.github.io/ohmyfood/";
 });
 viewProject[2].addEventListener('click', () => {
-    window.location.href = "https://andreeroudon.github.io/blogr-landing/";
+    window.location.href = "https://andreeroudon.github.io/ContraBureau/";
 });
 viewProject[3].addEventListener('click', () => {
     window.location.href = "https://andreeroudon.github.io/dine-restaurant/";
@@ -46,7 +46,7 @@ viewCode[1].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/ohmyfood";
 });
 viewCode[2].addEventListener('click', () => {
-    window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/blogr-landing";
+    window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/ContraBureau";
 });
 viewCode[3].addEventListener('click', () => {
     window.location.href = "https://github.com/AndreeRoudon/AndreeRoudon.github.io/tree/main/dine-restaurant";

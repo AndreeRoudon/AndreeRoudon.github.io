@@ -70,7 +70,7 @@ body {
 }
 .projects__item__design--img {
   width: 100%;
-  height: auto;
+  max-height: 400px;
 }
 .projects__item__design:hover .images {
   filter: brightness(20%);

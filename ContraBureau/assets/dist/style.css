@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E9E1D3;
+  font-family: "Space Grotesk", sans-serif;
+  color: #C92D1F;
+}
+
+h1 {
+  font-family: "Crimson Text", sans-serif;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+.item:before {
+  content: "";
+  position: absolute;
+  background: #C92D1F;
+  height: 0.2vw;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 1s ease-out;
+  transform-origin: left;
+}
+.item.visible {
+  opacity: 1;
+}
+.item.visible:before {
+  transform: scaleX(1);
+}
+.item.visible .item__content {
+  transform: translateY(0);
+}
+.item:hover .item__images {
+  background-size: 120%;
+}
+.item:hover .item__images:after {
+  transform: translateY(-100%);
+}
+.item:hover .item__content {
+  color: white;
+}
+.item__images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: center;
+  z-index: -1;
+  transition: background-size 0.5s ease-out;
+}
+.item__images:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #E9E1D3;
+  transition: transform 0.3s ease-out;
+}
+.item__images:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease-out;
+}
+.item__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+  height: 16vw;
+  align-items: center;
+  transform: translateY(40%);
+  transition: transform ease-out 0.5s, color ease-in-out 0.3s;
+}
+.item__heading {
+  display: flex;
+  gap: 1.4vw;
+}
+.item__heading .item__number {
+  font-size: 1.2vw;
+  margin-top: 2vw;
+  text-decoration: underline;
+}
+.item__heading .item__title {
+  font-size: 8vw;
+  font-weight: 400;
+}
+.item__metas {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  text-transform: uppercase;
+  letter-spacing: 0.15vw;
+  margin-top: 2.4vw;
+}
+.item__metas span {
+  font-size: 0.7vw;
+}
+.item__metas strong {
+  font-size: 1.3vw;
+}
+
+/*# sourceMappingURL=style.css.map */
