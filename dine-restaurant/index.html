@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,49 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
   <title>Dine Website Challenge</title>
 </head>
+
 <body>
-  <header>
+  <header class="header-home">
     <div class="container">
-      <div class="logo">
+      <div class="header-home__logo">
         <img src="images/logo.svg">
       </div>
-      <div class="intro">
-        <h1>Exquisite dining since 1989</h1>
-        <p>Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from 
-          the comfort of our farmhouse.</p>
-        <button>BOOK A TABLE</button>
+      <div class="header-home__intro">
+        <h1 class="header-home__intro--title">Exquisite dining since 1989</h1>
+        <p class="header-home__intro--parag">Experience our seasonal menu in beautiful country surroundings. 
+          Eat the freshest produce from the comfort of our farmhouse.</p>
+        <button class="header-home__intro--btn">BOOK A TABLE</button>
       </div>
     </div>
-    <div class="intro-img"></div>
+    <div class="header-home__image"></div>
   </header>
-  <main>
+
+  <main class="main-home">
     <div class="fond-gris"></div>
-    <section>
+
+    <section class="description">
       <div class="container">
-        <div class="block-right">
-          <div class="img-nature"></div>
-          <div class="infos">
-            <div class="icon"></div>
-            <h2>Enjoyable place for all the family</h2>
-            <p>Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
+        <div class="description__place">
+          <div class="description__place--natureImg"></div>
+          <div class="description__infos">
+            <div class="description__infos--icon"></div>
+            <h2 class="description__infos--title">Enjoyable place for all the family</h2>
+            <p class="description__infos--parag">Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange
               a tour of the farm before your meal.</p>
           </div>
         </div>
-      
-        <div class="block-left">
-          <div class="img-resto"></div>
-          <div class="infos">
-            <div class="icon"></div>
-            <h2>The most locally sourced food</h2>
-            <p>All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
-            eating the freshest, most sustainable food.</p>
+
+        <div class="description__resto">
+          <div class="description__resto--restoImg"></div>
+          <div class="description__infos">
+            <div class="description__infos--icon"></div>
+            <h2 class="description__infos--title">The most locally sourced food</h2>
+            <p class="description__infos--parag">All our ingredients come directly from our farm or local fishery. So you can be sure that you’re
+              eating the freshest, most sustainable food.</p>
           </div>
         </div>
         <div class="block-line">
@@ -59,52 +64,51 @@
       </div>
       <div class="fond-gris2"></div>
     </section>
-    <aside>
-      <div class="container">
-        <div class="block-list">
-          <div class="left">
-            <div class="icon"></div>
-            <h2>A few highlights from our menu</h2>
-            <p>We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. 
-            Our menu is revamped every season.</p>
-          </div>
 
-          <div class="right">
-            <div class="flat">
-              <div class="barre"></div>
-              <img src="images/homepage/salmon-desktop-tablet.jpg">
-              <div class="descript">
-                <h3>Seared Salmon Fillet</h3>
-                <p>Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
-              </div>
+    <aside class="menu">
+      <div class="menu__contain container">
+        <div class="menu__description">
+          <div class="menu__description--icon"></div>
+          <h2 class="menu__description--title">A few highlights from our menu</h2>
+          <p class="menu__description--parag">We cater for all dietary requirements, but here's a glimpse at some of our diner's favourites.
+            Our menu is revamped every season.</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item--flat">
+            <img src="images/homepage/salmon-desktop-tablet.jpg">
+            <div class="menu__item--text">
+              <h3 class="menu__item--title">Seared Salmon Fillet</h3>
+              <p class="menu__item--parag">Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
             </div>
-            <div class="flat">
-              <div class="barre"></div>
-              <img src="images/homepage/beef-desktop-tablet.jpg">
-              <div class="descript">
-                <h3>Rosemary Filet Mignon</h3>
-                <p>Our prime beef served to your taste with a delicious choice of seasonal sides.</p>
-              </div>
+          </div>
+          <div class="menu__item--flat">
+            <img src="images/homepage/beef-desktop-tablet.jpg">
+            <div class="menu__item--text">
+              <h3 class="menu__item--title">Rosemary Filet Mignon</h3>
+              <p class="menu__item--parag">Our prime beef served to your taste with a delicious choice of seasonal sides.</p>
             </div>
-            <div class="flat">
-              <div class="barre"></div>
-              <img src="images/homepage/chocolate-desktop-tablet.jpg">
-              <div class="descript">
-                <h3>Summer Fruit Chocolate Mousse</h3>
-                <p>Creamy mousse combined with summer fruits and dark chocolate shavings.</p>
-              </div>
+          </div>
+          <div class="menu__item--flat">
+            <img src="images/homepage/chocolate-desktop-tablet.jpg">
+            <div class="menu__item--text">
+              <h3 class="menu__item--title">Summer Fruit Chocolate Mousse</h3>
+              <p class="menu__item--parag">Creamy mousse combined with summer fruits and dark chocolate shavings.</p>
             </div>
           </div>
         </div>
       </div>
     </aside>
-    <div class="content-anim">
+
+    <section class="content-anim">
       <div class="fond-gris3"></div>
       <div class="container">
         <div class="images">
-          <div class="image" data-image-slide="1" style="background-image : url(images/homepage/family-gathering-desktop.jpg)"></div>
-          <div class="image" data-image-slide="2" style="background-image : url(images/homepage/social-events-desktop.jpg)"></div>
-          <div class="image" data-image-slide="3" style="background-image : url(images/homepage/special-events-desktop.jpg)"></div>
+          <div class="image" data-image-slide="1"
+            style="background-image : url(images/homepage/family-gathering-desktop.jpg)"></div>
+          <div class="image" data-image-slide="2"
+            style="background-image : url(images/homepage/social-events-desktop.jpg)"></div>
+          <div class="image" data-image-slide="3"
+            style="background-image : url(images/homepage/special-events-desktop.jpg)"></div>
         </div>
         <div class="description">
           <div class="title">
@@ -113,12 +117,15 @@
             <h1 data-title-slide="3">Social Events</h1>
           </div>
           <div class="text">
-            <p class="paragraph" data-text-slide="1"> We love catering for entire families. So please bring everyone along for a special meal with your 
+            <p class="paragraph" data-text-slide="1"> We love catering for entire families. So please bring everyone
+              along for a special meal with your
               loved ones. We'll provide a memorable experience for all.
             </p>
-            <p class="paragraph" data-text-slide="2"> Whether it's a romantic dinner or special date you're celebrating with others we'll look after you. 
+            <p class="paragraph" data-text-slide="2"> Whether it's a romantic dinner or special date you're celebrating
+              with others we'll look after you.
               We'll be sure to mark your special date with an unforgettable meal.</p>
-            <p class="paragraph" data-text-slide="3"> Are you looking to have a larger social event? No problem! We're more than happy to cater for big 
+            <p class="paragraph" data-text-slide="3"> Are you looking to have a larger social event? No problem! We're
+              more than happy to cater for big
               parties. We'll work with you to make your event a hit with everyone.
             </p>
           </div>
@@ -130,36 +137,39 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
+
   </main>
 
-<footer>
-  <div class="top">
-    <h1>Ready to make a reservation?</h1>
-    <button> BOOK A TABLE </buttton>
-  </div>
-  <div class="bottom">
-    <div class="container">
-      <div class="logo">
-        <img src="images/logo.svg">
-      </div>
-      <table>
-        <tr>
-          <td>Marthwaite, Sedbergh</td>
-          <td>Open Times</td>
-        <tr>
-        <tr>
-          <td>Cumbria</td>
-          <td>Mon - Fri: 09:00 AM - 10:00 PM</td>
-        </tr>
-        <tr>
-          <td>+00 44 123 4567</td>
-          <td>Sat - Sun: 09:00 AM - 11:30 PM</td>
-        </tr>
-      </table>
+  <footer>
+    <div class="top">
+      <h1>Ready to make a reservation?</h1>
+      <button> BOOK A TABLE </buttton>
     </div>
-  </div>
-</footer>
-<script src="app.js"></script>
-</html>
+    <div class="bottom">
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.svg">
+        </div>
+        <table>
+          <tr>
+            <td>Marthwaite, Sedbergh</td>
+            <td>Open Times</td>
+          <tr>
+          <tr>
+            <td>Cumbria</td>
+            <td>Mon - Fri: 09:00 AM - 10:00 PM</td>
+          </tr>
+          <tr>
+            <td>+00 44 123 4567</td>
+            <td>Sat - Sun: 09:00 AM - 11:30 PM</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+
 </body>
+
+</html>

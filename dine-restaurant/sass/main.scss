@@ -1,301 +1,25 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+// bases typographie et body
+@import "bases/bases.scss";
 
-body{
-    font-family: 'League Spartan', sans-serif;
-}
+// utils
+@import "utils/variables.scss";
+@import "utils/mixin.scss";
 
-.container{
-    width: 1110px;
-    margin: 0 auto;
-}
+// pages html
+@import "pages/home.scss";
+@import "pages/booking.scss";
 
-header{
-    background-color: hsl(0, 0% ,7%);
-    color: hsl(0, 0% ,100%);
-    height: 820px;
-    position: relative;
-    z-index: 1;
-    .logo{
-        padding: 4rem 0;
-    }
-    .intro{
-        margin-top: 5rem;
-        h1{
-            font-size: 80px;
-            font-weight: 400;
-            width: 40rem;
-        }
-        p{
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 30px;
-            width: 24rem;
-        }
-        button{
-            margin-top: 3rem;
-            color: hsl(0, 0% ,100%);
-            background: none;
-            border: 1px solid hsl(0, 0% ,100%);
-            padding: 1rem 2.5rem;
-            font-size: 17px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            &:hover{
-                background: hsl(0, 0% ,100%);
-                color: hsl(0, 0% ,7%);
-            }
-        }
-    }
-    .intro-img{
-        position: absolute;
-        z-index: -1;
-        background-image: url("../images/homepage/hero-bg-desktop.jpg");
-        background-position: 20%;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 820px;
-        top: 0;
-        right: 0;
-    }
-}
+// layouts
+@import "layouts/footer.scss";
 
-
-main{
-    position: relative;
-    .fond-gris{
-        position: absolute;
-        background: hsl(217, 14% ,42%);
-        opacity: 0.07;
-        width: 65%;
-        height: 320px;
-        top: 15rem;
-        border-top-right-radius: 6rem;
-    }
-}
-
-
-section{
-    position: relative;
-    .block-right{
-        padding: 12rem 0;
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
-        .img-nature{
-            position: absolute;
-            z-index: 2;
-            background-image: url("../images/homepage/enjoyable-place-desktop.jpg");
-            width: 540px;
-            height: 720px;
-            left: 0;
-            bottom: 0;
-        }
-        .infos{
-            width: 24rem;
-            padding-top: 4rem;
-            position: relative;
-            .icon{
-                display: flex;
-                align-items: center;
-                position: absolute;
-                width: 7px;
-                height: 7px;
-                top: 0;
-                border: 1px solid hsl(27, 22%, 51%);
-                border-radius: 100%;
-                &::after{
-                    content: '';
-                    position: absolute;
-                    left: 0.8rem;
-                    width: 50px;
-                    height: 1px;
-                    background: hsl(27, 22%, 51%);
-                }
-            }
-            h2{
-                width: 22rem;
-                font-size: 48px;
-                font-weight: 400;
-            }
-            p{
-                color: hsl(218, 21%, 18%);
-                margin-top: 2rem;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 30px;
-            }
-        }
-    }
-
-    .block-left{
-        padding: 20rem 0 12rem;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        .img-resto{
-            position: absolute;
-            z-index: 2;
-            background-image: url("../images/homepage/locally-sourced-desktop.jpg");
-            width: 540px;
-            height: 720px;
-            right: 0;
-            bottom: -5rem;
-        }
-        .infos{
-            width: 24rem;
-            padding-top: 4rem;
-            position: relative;
-            .icon{
-                display: flex;
-                align-items: center;
-                position: absolute;
-                width: 7px;
-                height: 7px;
-                top: 0;
-                border: 1px solid hsl(27, 22%, 51%);
-                border-radius: 100%;
-                &::after{
-                    content: '';
-                    position: absolute;
-                    left: 0.8rem;
-                    width: 50px;
-                    height: 1px;
-                    background: hsl(27, 22%, 51%);
-                }
-            }
-            h2{
-                width: 22rem;
-                font-size: 48px;
-                font-weight: 400;
-            }
-            p{
-                color: hsl(218, 21%, 18%);
-                margin-top: 2rem;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 30px;
-            }
-        }
-    }
-    .container{
-        position: relative;
-    }
-    .block-line{
-        position: absolute;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        right: -7rem;
-        bottom: 17.5rem;
-        width: 160px;
-        height: 76px;
-        .line{
-            width: 160px;
-            height: 6px;
-            background: hsl(27, 22%, 51%);
-        }
-    }
-    .fond-gris2{
-        position: absolute;
-        background: hsl(217, 14% ,42%);
-        opacity: 0.07;
-        right: 0;
-        bottom: 0;
-        width: 65%;
-        height: 320px;
-        border-top-left-radius: 6rem;
-    }
-}
-
-aside{
-    background-color: hsl(0, 0% ,7%);
-    color: hsl(0, 0% ,100%);
-    height: 760px;
-    .block-list{
-        padding-top: 12rem;
-        display: flex;
-        justify-content: space-between;
-        .left{
-            position: relative;
-            padding-top: 4rem;
-            width: 25rem;
-            .icon{
-                display: flex;
-                align-items: center;
-                position: absolute;
-                width: 7px;
-                height: 7px;
-                top: 0;
-                border: 1px solid hsl(27, 22%, 51%);
-                border-radius: 100%;
-                &::after{
-                    content: '';
-                    position: absolute;
-                    left: 0.8rem;
-                    width: 50px;
-                    height: 1px;
-                    background: hsl(27, 22%, 51%);
-                }
-            }
-            h2{
-                font-size: 48px;
-                font-weight: 400;
-            }
-            p{
-                margin-top: 2rem;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 30px;
-            }
-        }
-        .right{
-            .flat{
-                position: relative;
-                display: flex;
-                padding: 2rem 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-                &:last-child{
-                    border: none;
-                }
-                .barre{
-                    position: absolute;
-                    left: 8rem;
-                    bottom: 6.5rem;
-                    width: 32px;
-                    height: 1px;
-                    background: hsl(27, 22%, 51%);
-                }
-            }
-            .descript{
-                padding-left: 4rem;
-                padding-top: 1rem;
-            }
-            h3{
-                font-size: 20px;
-                font-weight: 400;
-                margin-bottom: 0.7rem;
-            }
-            p{
-                width: 20rem;
-                font-size: 16px;
-                font-weight: 400px;
-                line-height: 26px;
-            }
-        }
-    }
-}
-.content-anim{
+.content-anim {
     height: 600px;
     margin: 10rem 0;
     position: relative;
-    .fond-gris3{
+
+    .fond-gris3 {
         position: absolute;
-        background: hsl(217, 14% ,42%);
+        background: hsl(217, 14%, 42%);
         opacity: 0.07;
         left: 0;
         top: -10rem;
@@ -303,14 +27,17 @@ aside{
         height: 320px;
         border-top-right-radius: 6rem;
     }
-    .container{
+
+    .container {
         display: flex;
         align-items: center;
     }
-    .images{
+
+    .images {
         position: relative;
         min-width: 540px;
         height: 600px;
+
         .image {
             width: 100%;
             height: 100%;
@@ -318,34 +45,26 @@ aside{
             position: absolute;
             top: 0;
             left: 0;
-            
+
             &:not(.active) {
                 animation: imageFadeOn .4s ease-out forwards;
             }
         }
     }
 
-    .images[data-image-slide="1"] .image[data-image-slide="1"] {
-      animation: imageFadeIn .4s ease-out forwards;
-    }
-    
-    .images[data-image-slide="2"] .image[data-image-slide="2"] {
-        animation: imageFadeIn .4s ease-out forwards;
-    }
-    
-    .images[data-image-slide="3"] .image[data-image-slide="3"] {
-        animation: imageFadeIn .4s ease-out forwards;
-    }
 
-    .description{
+
+    .description {
         position: relative;
         height: 100%;
         padding-left: 125px;
         width: 100%;
-        .title{
+
+        .title {
             height: 50px;
             width: 100%;
-            h1{
+
+            h1 {
                 font-size: 48px;
                 font-weight: 400;
                 position: absolute;
@@ -353,21 +72,14 @@ aside{
                 left: 125px;
             }
         }
-        h1[data-title-slide="1"],
-        h1[data-title-slide="2"],
-        h1[data-title-slide="3"] {
-          animation: textFadeOn .4s ease-out forwards;
-        }
-        
-        h1[data-title-slide="1"].active,
-        h1[data-title-slide="2"].active,
-        h1[data-title-slide="3"].active {
-            animation: textFadeIn .4s ease-out forwards;
-        }
-        .text{
+
+
+
+        .text {
             position: relative;
             height: 120px;
-            p{
+
+            p {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -377,35 +89,28 @@ aside{
                 line-height: 30px;
             }
         }
-        p[data-text-slide="1"],
-        p[data-text-slide="2"],
-        p[data-text-slide="3"] {
-          animation: textFadeOn .4s ease-out forwards;
-        }
-        
-        p[data-text-slide="1"].active,
-        p[data-text-slide="2"].active,
-        p[data-text-slide="3"].active {
-            animation: textFadeIn .4s ease-out forwards;
-        }
 
-        button{
+
+
+        button {
             margin: 3rem 0 5rem;
-            color: hsl(0, 0% ,100%);
-            background: hsl(0, 0% ,7%);
+            color: hsl(0, 0%, 100%);
+            background: hsl(0, 0%, 7%);
             border: none;
             width: 245px;
             height: 64px;
             font-size: 17px;
             letter-spacing: 2px;
             cursor: pointer;
-            &:hover{
-                border: 1px solid hsl(0, 0% ,7%);
-                background: hsl(0, 0% ,100%);
-                color: hsl(0, 0% ,7%);
+
+            &:hover {
+                border: 1px solid hsl(0, 0%, 7%);
+                background: hsl(0, 0%, 100%);
+                color: hsl(0, 0%, 7%);
             }
         }
-        ul > li{
+
+        li {
             display: flex;
             align-items: center;
             list-style: none;
@@ -413,79 +118,129 @@ aside{
             letter-spacing: 2px;
             margin-top: 1rem;
             cursor: pointer;
-            &:after{
+            &:after {
                 content: '';
                 position: absolute;
                 width: 95px;
                 height: 1px;
                 background: hsl(27, 22%, 51%);
                 left: -135px;
-                transform: scaleX(0);            
+                transform: scaleX(0);
+                transition: all .4s ease-out;
+                transform-origin: left;
             }
         }
-        li[data-btn-slide="1"],
-        li[data-btn-slide="2"],
-        li[data-btn-slide="3"] {
-            animation: btnFadeOn .4s ease-out forwards;
-        }
-        
-        li[data-btn-slide="1"].active,
-        li[data-btn-slide="2"].active,
-        li[data-btn-slide="3"].active {
-            animation: btnFadeIn .4s ease-out forwards;
-            &:after{
-                transform: scaleX(1);
-            }
-        }
+
+
     }
 }
 
-footer{
+// Animation data attr
+
+.images[data-image-slide="1"] .image[data-image-slide="1"],
+.images[data-image-slide="2"] .image[data-image-slide="2"],
+.images[data-image-slide="3"] .image[data-image-slide="3"]{
+    animation: imageFadeIn .4s ease-out forwards;
+}
+
+h1[data-title-slide="1"],
+h1[data-title-slide="2"],
+h1[data-title-slide="3"] {
+    animation: textFadeOn .4s ease-out forwards;
+}
+
+h1[data-title-slide="1"].active,
+h1[data-title-slide="2"].active,
+h1[data-title-slide="3"].active {
+    animation: textFadeIn .4s ease-out;
+}
+
+p[data-text-slide="1"],
+p[data-text-slide="2"],
+p[data-text-slide="3"] {
+    animation: textFadeOn .4s ease-out forwards;
+}
+
+p[data-text-slide="1"].active,
+p[data-text-slide="2"].active,
+p[data-text-slide="3"].active {
+    animation: textFadeIn .4s ease-out;
+}
+
+li[data-btn-slide="1"],
+li[data-btn-slide="2"],
+li[data-btn-slide="3"] {
+    animation: btnFadeOn .4s ease-out forwards;
+    &:hover{
+        opacity: 1!important;
+    }
+}
+
+li[data-btn-slide="1"].active,
+li[data-btn-slide="2"].active,
+li[data-btn-slide="3"].active {
+    animation: btnFadeIn .4s ease-out forwards;
+
+    &:after {
+        transform: scaleX(1);
+    }
+}
+
+footer {
     display: flex;
     flex-direction: column;
-    .top{
+
+    .top {
         background-image: url("../images/homepage/ready-bg-desktop.jpg");
         background-size: cover;
         height: 240px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        color: hsl(0, 0% ,100%);
-        button{
-            color: hsl(0, 0% ,100%);
+        color: hsl(0, 0%, 100%);
+
+        button {
+            color: hsl(0, 0%, 100%);
             background: none;
-            border: 1px solid hsl(0, 0% ,100%);
+            border: 1px solid hsl(0, 0%, 100%);
             width: 245px;
             height: 64px;
             font-size: 17px;
             letter-spacing: 2px;
             cursor: pointer;
-            &:hover{
-                background: hsl(0%, 0% ,100%);
-                color: hsl(0, 0% ,7%);
+
+            &:hover {
+                background: hsl(0%, 0%, 100%);
+                color: hsl(0, 0%, 7%);
             }
         }
-        h1{
+
+        h1 {
             font-size: 48px;
             font-weight: 400;
         }
     }
-    .bottom{
-        background: hsl(0, 0% ,7%);
-        color: hsl(0, 0% ,100%);
+
+    .bottom {
+        background: hsl(0, 0%, 7%);
+        color: hsl(0, 0%, 100%);
         height: 240px;
-        .container{
+
+        .container {
             height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo{
+
+        .logo {
             flex-grow: 1;
         }
-        table{
+
+        table {
             flex-grow: 2;
-            td{
+
+            td {
                 padding: 5px 0;
             }
         }
@@ -494,66 +249,72 @@ footer{
 
 
 @keyframes imageFadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-20%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes imageFadeOn {
-    0%{
+    0% {
         opacity: 1;
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         opacity: 0;
         transform: translateX(-20%);
     }
 }
 
 @keyframes textFadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(-20%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes textFadeOn {
-    0%{
+    0% {
         opacity: 1;
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         opacity: 0;
         transform: translateY(-20%);
     }
 }
 
 @keyframes btnFadeIn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(2%);
     }
 }
 
 @keyframes btnFadeOn {
-    0%{
+    0% {
         opacity: 1;
         transform: translateX(2%);
     }
-    100%{
+
+    100% {
         opacity: 0.5;
         transform: translateX(0);
     }
