@@ -1,3 +1,5 @@
+/****************************** HOME ***************************************/
+
 // Sélectionnez les éléments des boutons
 const btn1 = document.getElementById("btn-1");
 const btn2 = document.getElementById("btn-2");
@@ -55,3 +57,5 @@ btn2.addEventListener("click", function () {
 btn3.addEventListener("click", function () {
     handleButtonClick(3);
 });
+
+/****************************** BOOKING ***************************************/

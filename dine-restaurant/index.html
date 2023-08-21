@@ -23,7 +23,7 @@
         <h1 class="header-home__intro--title">Exquisite dining since 1989</h1>
         <p class="header-home__intro--parag">Experience our seasonal menu in beautiful country surroundings. 
           Eat the freshest produce from the comfort of our farmhouse.</p>
-        <button class="header-home__intro--btn">BOOK A TABLE</button>
+        <button onclick="window.location.href = 'booking.html'" class="header-home__intro--btn">BOOK A TABLE</button>
       </div>
     </div>
     <div class="header-home__image"></div>
@@ -129,7 +129,7 @@
               parties. We'll work with you to make your event a hit with everyone.
             </p>
           </div>
-          <button>BOOK A TABLE</button>
+          <button onclick="window.location.href = 'booking.html'">BOOK A TABLE</button>
           <ul class="list-btn">
             <li id="btn-1" data-btn-slide="1">FAMILY GATHERING</li>
             <li id="btn-2" data-btn-slide="2">SPECIAL EVENTS</li>
@@ -138,38 +138,29 @@
         </div>
       </div>
     </section>
-
+    <div class="reservation">
+      <h1 class="reservation__title">Ready to make a reservation?</h1>
+      <button class="reservation__btn" onclick="window.location.href = 'booking.html'"> BOOK A TABLE </buttton>
+    </div>
   </main>
 
-  <footer>
-    <div class="top">
-      <h1>Ready to make a reservation?</h1>
-      <button> BOOK A TABLE </buttton>
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="images/logo.svg">
     </div>
-    <div class="bottom">
-      <div class="container">
-        <div class="logo">
-          <img src="images/logo.svg">
-        </div>
-        <table>
-          <tr>
-            <td>Marthwaite, Sedbergh</td>
-            <td>Open Times</td>
-          <tr>
-          <tr>
-            <td>Cumbria</td>
-            <td>Mon - Fri: 09:00 AM - 10:00 PM</td>
-          </tr>
-          <tr>
-            <td>+00 44 123 4567</td>
-            <td>Sat - Sun: 09:00 AM - 11:30 PM</td>
-          </tr>
-        </table>
+    <div class="footer__features">
+      <div class="footer__features--elem">
+        <span>Marthwaite, Sedbergh</span>
+        <span>Cumbria</span>
+        <span>+00 44 123 4567</span>
+      </div>
+      <div class="footer__features--elem">
+        <span>Open Times</span>
+        <span>Mon - Fri: 09:00 AM - 10:00 PM</span>
+        <span>Sat - Sun: 09:00 AM - 11:30 PM</span>
       </div>
     </div>
   </footer>
   <script src="app.js"></script>
-
 </body>
-
 </html>

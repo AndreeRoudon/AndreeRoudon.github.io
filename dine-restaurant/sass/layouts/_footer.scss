@@ -1,0 +1,29 @@
+.footer {
+    background: hsl(0, 0%, 7%);
+    color: hsl(0, 0%, 100%);
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+
+    &__logo {
+        margin-bottom: 2rem;
+    }
+
+    &__features {
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+        gap: 10vw;
+
+        &--elem {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+}
