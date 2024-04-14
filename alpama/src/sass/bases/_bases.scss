@@ -1,0 +1,16 @@
+@import '../utils/variables';
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: $color-background;
+    color: $color-black;
+}
+
+.coming-soon{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px - 200px);
+}
